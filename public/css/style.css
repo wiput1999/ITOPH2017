@@ -1,0 +1,74 @@
+@font-face{
+    font-family: cloud-l;
+    src:url(../fonts/Cloud-Light.otf);
+}
+
+@font-face{
+    font-family: cloud-b;
+    src:url(../fonts/Cloud-Bold.otf);
+}
+
+body{
+    margin:0px;
+    padding:0px;
+}
+
+h1,h2,h3,h4,h5{
+    padding:0px;
+    margin: 0px;
+    font-family: cloud-b !important;
+}
+
+.jumbotron{
+    /*background-color: #fff;*/
+    width: 100%;
+}
+
+#section1{
+    width: 100%;
+    background-color: #000;
+}
+
+#menu{
+    background:none;
+    -webkit-box-shadow: none;
+    box-shadow:none;
+}
+
+.logo{
+    margin: auto;
+    margin-top: 70px;
+    width: 80%;
+}
+
+.logo img{
+    width:100%;
+}
+
+.time-date{
+    margin-top:30px;
+}
+
+.time-date h1, .time-date h2{
+    padding:0px;
+    margin:0px;
+}
+
+.jumbobuttons{
+    margin-top: 40px;
+}
+
+.btn-jumbo{
+    color: #fff;
+    font-size: 1.5em !important;
+    font-family: cloud-b;
+    padding: 15px 30px 15px 30px !important;
+    border-radius: 100000px !important;
+} 
+.btn-blue{
+    background-color: #62b4fe;
+}
+
+.btn-org{
+    background-color: #fdc82c;
+}
