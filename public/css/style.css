@@ -19,10 +19,41 @@ h1,h2,h3,h4,h5{
     font-family: cloud-b !important;
 }
 
+
+.wrapper{
+    width: 80%;
+    margin:auto;
+}
+
 section{
     position: relative;
     float:left;
     width: 100%;
+}
+
+.title{
+    width:50%;
+    margin:0 auto;
+    position: relative;
+    z-index: 9;
+    text-align: center;
+    margin-bottom: 50px;    
+}
+
+.title h1{
+    position: relative;
+    width:auto;
+    font-size: 3em;
+}
+
+.under-line{
+    width: 50px;
+    position: relative;
+    height: 5px;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 10000000px;
+    margin-top: 7px;
 }
 
 .jumbotron{
@@ -35,6 +66,7 @@ section{
     position: fixed;
     bottom: 25px;
     left:25px;
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -128,7 +160,7 @@ section{
 
 
 #section2{
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 
@@ -137,7 +169,10 @@ section{
     margin:auto;
     width: 80%;
     position: relative;
+    height: 100%;
     width: 100%;
+    margin-top: 270px;
+    margin-bottom: 400px;
 }
 .intro-word{
     width: 90%;
@@ -177,27 +212,19 @@ section{
 
 .img-parallax-4{
     right: 0px;
-    top: 100px;
+    bottom: 0px;
 }
 
 /*section 3*/
 
 
 #section3{
-    padding-top:100px;
+    padding-top: 40px;
     padding-bottom:100px;
 }
-.card-item{
-    z-index: 9;
-    position: relative;
-}
 
-.card-item ul{
-
-}
-
-.card-item ul li{
-    float: left;
+.title-sec3{
+    color: #fff;
 }
 
 .blue-screen{
@@ -208,4 +235,46 @@ section{
     left:0px;
     z-index: 1;
     background-color: #2986c9;
+}
+
+.card-item{
+    margin:auto;
+    width: 22%;
+    margin-right: 3%;
+    padding: 30px 50px 45px 50px;
+    background-color: #fff;
+    z-index: 9;
+    position: relative;
+    display: flex;
+    float: left;
+    flex-direction: column;
+    border-radius: 12pt;
+    text-align: center;
+    box-shadow: 0px 7px 18px rgba(0, 0, 0, 0.19);
+}
+
+.card-item img{
+    width:80%;
+    margin: auto;
+}
+
+.card-item h1{
+    font-size: 20pt;
+    padding:0px;
+    margin-bottom: 0px;
+    color: #607a93;
+    font-family: cloud-b;
+}
+
+.card-item p{
+    font-size: 13pt;
+    color: #c4cdd8;
+}
+
+.card-btn{
+    background-color: #fdc82c;
+    border: none;
+    border-radius: 10000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
