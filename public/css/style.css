@@ -8,6 +8,13 @@
     src:url(../fonts/Cloud-Bold.otf);
 }
 
+
+*, *:before, *:after {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
 body{
     margin:0px;
     padding:0px;
@@ -16,12 +23,42 @@ body{
 h1,h2,h3,h4,h5{
     padding:0px;
     margin: 0px;
+    color: #231f20;
     font-family: cloud-b !important;
 }
 
 
+.white-color{
+    color: #fff;
+}
+
+.white-bg-color{
+    background-color: #fff;
+}
+
+.org-org{
+    color: #fdc82c;
+}
+
+.org-bg-color{
+    background-color: #fdc82c;
+}
+
+.blue-org{
+    color: #62b4fe;
+}
+
+.blue-bg-color{
+    background-color: #62b4fe;
+}
+
 .wrapper{
-    width: 80%;
+margin: 0 auto; 
+width: 90%;
+}
+
+.wrapper-60{
+    width: 60%;
     margin:auto;
 }
 
@@ -32,25 +69,25 @@ section{
 }
 
 .title{
-    width:50%;
+    width: 100%;
     margin:0 auto;
     position: relative;
     z-index: 9;
     text-align: center;
-    margin-bottom: 50px;    
+    margin-bottom: 50px;
 }
 
 .title h1{
     position: relative;
     width:auto;
-    font-size: 3em;
+    font-size: 3.5em;
+    margin-top: 10px;
 }
 
 .under-line{
-    width: 50px;
+    width: 100px;
     position: relative;
     height: 5px;
-    background-color: #fff;
     margin: auto;
     border-radius: 10000000px;
     margin-top: 7px;
@@ -223,10 +260,6 @@ section{
     padding-bottom:100px;
 }
 
-.title-sec3{
-    color: #fff;
-}
-
 .blue-screen{
     position: absolute;
     width: 100%;
@@ -239,8 +272,10 @@ section{
 
 .card-item{
     margin:auto;
-    width: 22%;
-    margin-right: 3%;
+    width: 21%;
+    height: 440px;
+    margin-left: 2.5%;
+    margin-right: 1%;
     padding: 30px 50px 45px 50px;
     background-color: #fff;
     z-index: 9;
@@ -254,7 +289,7 @@ section{
 }
 
 .card-item img{
-    width:80%;
+    width: 60%;
     margin: auto;
 }
 
@@ -268,13 +303,108 @@ section{
 
 .card-item p{
     font-size: 13pt;
-    color: #c4cdd8;
+    color: #5d5d5d;
 }
 
 .card-btn{
     background-color: #fdc82c;
     border: none;
+    margin-top: 10px;
     border-radius: 10000px;
     padding-top: 10px;
     padding-bottom: 10px;
+    color: #fff;
+    font-family: cloud-b;
+    font-size: 19pt;
+}
+
+
+
+
+
+/*section 4*/
+
+
+#section4{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #fdc82c;
+}
+
+.card-battle-item{
+    width:300px;
+    float: left;
+}
+
+.card-battle-item img{
+    
+}
+.card-battle-item h1{
+
+}
+.card-battle-item p{
+
+}
+
+#e-sport{
+    position: relative;
+    transition:all 0.5s ease;
+    top:0px;
+}
+
+#e-sport:hover{
+   top: 20px;
+}
+
+.bg-esport{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top:0px;
+    height: 100%;
+    opacity: 0;
+    transition:all 0.5s ease;
+    background-size: cover;
+    background-image: url(../images/esport.jpg);
+}
+
+
+
+
+/*-- RESPONSIVE  --*/
+@media screen and (max-width:1300px) {
+    .card-item{
+        width: 48%;
+        float: left;
+        margin-right: 2% !important;
+        margin-bottom: 3% !important;
+        margin: auto;
+    }
+    
+    .blue-screen{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    
+    .card-battle-item{
+        width: 48%;
+        float: left;
+        margin-right: 2% !important;
+        margin-bottom: 30px !important;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .card-item{
+        width: 100%;
+        margin: auto;
+    }
+
+    .card-battle-item{
+        width: 100%;
+        margin: auto;
+    }
 }

@@ -2,6 +2,17 @@ $( document ).ready(function() {
     //  if (window.matchMedia('(max-width: 767px)').matches) {
     //     alert("adasdasd");
     //     }
+    var underline_w = "<div class='under-line white-bg-color'></div>";
+    var underline_o = "<div class='under-line org-bg-color'></div>";
+    $('#e-sport').hover(function(){
+        $('.bg-esport').css("opacity","0.2");
+        $('#section4').css("background-color","#20201f");
+        $('.retext h1').html("E-SPORT"+underline_o);
+    }, function() {
+        $('.bg-esport').css("opacity","0");
+        $('#section4').css("background-color","#fdc82c");
+        $('.retext h1').html("การแข่งขัน"+underline_w);
+    });
 
 
     var ui_card = $(".ui-card");
