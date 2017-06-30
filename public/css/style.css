@@ -63,6 +63,10 @@ section{
     background-image: url(../images/section1.png);
 }
 
+#nav-btn{
+    margin-top: 40px;
+}
+
 #menu{
     background:none;
     -webkit-box-shadow: none;
@@ -129,16 +133,79 @@ section{
 
 
 .intro{
-    background-color: #fff;
-    padding: 50px;
     text-align: center;
     margin:auto;
     width: 80%;
-    box-shadow: 1px 1px 1px #000;
+    position: relative;
+    width: 100%;
+}
+.intro-word{
+    width: 90%;
+        padding: 50px;
+        box-shadow: 1px 1px 1px #000;
+    background-color: #fff;
 }
 
 .intro h1{
     width: 100%;
     font-size: 45px;
     position: relative;
+}
+
+.img-parallax{
+    width: 300px;
+    position: absolute;
+}
+
+
+.img-parallax img{
+    width: 100%;
+}
+
+.img-parallax-1{
+    left:0px;
+}
+
+.img-parallax-2{
+    left: 0px;
+    top: 100px;
+}
+
+.img-parallax-3{
+    right: 0px;
+}
+
+.img-parallax-4{
+    right: 0px;
+    top: 100px;
+}
+
+/*section 3*/
+
+
+#section3{
+    padding-top:100px;
+    padding-bottom:100px;
+}
+.card-item{
+    z-index: 9;
+    position: relative;
+}
+
+.card-item ul{
+
+}
+
+.card-item ul li{
+    float: left;
+}
+
+.blue-screen{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top:0px;
+    left:0px;
+    z-index: 1;
+    background-color: #2986c9;
 }
