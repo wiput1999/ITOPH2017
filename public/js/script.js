@@ -7,11 +7,21 @@ $( document ).ready(function() {
     $('#e-sport').hover(function(){
         $('.bg-esport').css("opacity","0.2");
         $('#section4').css("background-color","#20201f");
-        $('.retext h1').html("E-SPORT"+underline_o);
+        $('.retext h1').html("E-SPORT"+underline_o).fadeIn('slow');
     }, function() {
         $('.bg-esport').css("opacity","0");
         $('#section4').css("background-color","#fdc82c");
-        $('.retext h1').html("การแข่งขัน"+underline_w);
+        $('.retext h1').html("การแข่งขัน"+underline_w).fadeIn('slow');
+    });
+
+    $('#project-it').hover(function(){
+        $('.bg-project-it').css("opacity","0.2");
+        $('#section4').css("background-color","#20201f");
+        $('.retext h1').html("การแข่งขันโครงงาน"+underline_o).fadeIn('slow');
+    }, function() {
+        $('.bg-project-it').css("opacity","0");
+        $('#section4').css("background-color","#fdc82c");
+        $('.retext h1').html("การแข่งขัน"+underline_w).fadeIn('slow');
     });
 
 

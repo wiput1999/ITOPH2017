@@ -74,7 +74,7 @@ section{
     position: relative;
     z-index: 9;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .title h1{
@@ -130,6 +130,7 @@ section{
 #section1{
     background-repeat: repeat;
     background-image: url(../images/section1.png);
+    height: 100vh;
 }
 
 #nav-btn{
@@ -198,6 +199,7 @@ section{
 
 #section2{
     /* height: 100vh; */
+    background-color: #f3f3f3;
 }
 
 
@@ -208,14 +210,37 @@ section{
     position: relative;
     height: 100%;
     width: 100%;
-    margin-top: 270px;
-    margin-bottom: 400px;
+    margin-top: 100px;
+    /* margin-bottom: 400px; */
 }
 .intro-word{
-    width: 90%;
-        padding: 50px;
-        box-shadow: 1px 1px 1px #000;
+    width: 100%;
+    padding: 50px 50px 130px 50px;
+    position: relative;
+    z-index: 9;
     background-color: #fff;
+    float: left;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.intro-word p{
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    color: #444;
+    text-align: left;
+}
+
+.qouet{
+    position: absolute;
+    top: -20px;
+}
+
+
+.qouet h1{
+    color: #eaeaea;
+    font-size: 15em !important;
+    font-family: "Times New Roman", Times, serif !important;
 }
 
 .intro h1{
@@ -223,10 +248,13 @@ section{
     font-size: 45px;
     position: relative;
 }
-
 .img-parallax{
-    width: 300px;
-    position: absolute;
+    width: 100%;
+    z-index: 1;
+    /* position: absolute; */
+    float: left;
+    position: relative;
+    height: 0;
 }
 
 
@@ -234,24 +262,29 @@ section{
     width: 100%;
 }
 
-.img-parallax-1{
-    left:0px;
+.img-parallax ul{
+
 }
+
+.img-parallax ul li{
+    list-style: none;
+    float: left;
+    width: 35%;
+    position: absolute;
+    z-index: 9;
+}
+
+.img-parallax-1{
+    left: 0px;
+}
+
 
 .img-parallax-2{
-    left: 0px;
-    top: 100px;
+    right: -250px;
+    top: -280px;
+    transform: rotate(20deg);
+    z-index: 9;
 }
-
-.img-parallax-3{
-    right: 0px;
-}
-
-.img-parallax-4{
-    right: 0px;
-    bottom: 0px;
-}
-
 /*section 3*/
 
 
@@ -330,30 +363,68 @@ section{
     padding-bottom: 50px;
     background-color: #fdc82c;
 }
-
 .card-battle-item{
-    width:300px;
+    background-color: #fff;
+    border: 2px solid #ffffff;
+    padding: 25px;
+    margin: 20px 60px 20px 0px;
+    min-height: 255px;
+    width: 100%;
+    background-size: cover;
+    height: 280px;
+    margin-right: 80px;
+    background-position: right bottom;
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 10px 18px 3px rgba(0, 0, 0, 0.19);
     float: left;
 }
 
-.card-battle-item img{
-    
+.img-item-battle{
+    position: absolute;
+    z-index: 1;
+    opacity: 0.1;
+    bottom: -100px;
+    width: 100%;
+    text-align: center;
 }
-.card-battle-item h1{
 
+.img-item-battle img{
+    width: 300px;
 }
-.card-battle-item p{
-
+.text-item-battle{
+    float: left;
+    width: 100%;
+    /* padding: 5px; */
+    text-align: center;
+    z-index: 2;
+    position: relative;
 }
 
+.text-item-battle h1{
+    font-size: 36px;
+}
+
+.text-item-battle p{
+    /* width: 70%; */
+    margin: auto;
+}
 #e-sport{
     position: relative;
     transition:all 0.5s ease;
     top:0px;
 }
 
-#e-sport:hover{
-   top: 20px;
+.battle-hover:hover{
+    background-color: #fdc82c;
+}
+
+
+.battle-hover:hover .card-battle-btn{
+    background-color: #231f20;
+    
 }
 
 .bg-esport{
@@ -363,10 +434,49 @@ section{
     top:0px;
     height: 100%;
     opacity: 0;
-    transition:all 0.5s ease;
+    transition:all 1s ease;
     background-size: cover;
     background-image: url(../images/esport.jpg);
 }
+
+.bg-project-it{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top:0px;
+    height: 100%;
+    opacity: 0;
+    transition:all 1s ease;
+    background-size: cover;
+    background-image: url(../images/project-it.jpg);
+}
+
+
+.card-battle-btn{
+    background-color: #fdc82c;
+    border: none;
+    margin-top: 10px;
+    border-radius: 10000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    font-family: cloud-l;
+    font-size: 19px;
+    width: 70%;
+    background-color: #62b4fe;
+}
+
+.under-line-battle{
+    width: 50px;
+    position: relative;
+    height: 5px;
+    margin: auto;
+    border-radius: 10000000px;
+    margin-top: 7px;
+    transition:all 1s ease;
+}
+
+
 
 
 
@@ -389,7 +499,7 @@ section{
 @media screen and (max-width: 1024px){
     
     .card-battle-item{
-        width: 48%;
+        width: 100%%;
         float: left;
         margin-right: 2% !important;
         margin-bottom: 30px !important;
