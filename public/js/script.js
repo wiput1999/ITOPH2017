@@ -92,7 +92,7 @@ $(document).ready(function () {
         //     $("#navbar ul li a").css("color","#fff");
         // }else{
         //     $("#navbar ul li a").css("color","#464646");
-        }
+        // }
 
         // if (ScrollTop >  sec7 ) {
         //     $("#navbar ul li a").css("color","#fff");
