@@ -44,6 +44,10 @@ h1,h2,h3,h4,h5{
     background-color: #fdc82c;
 }
 
+.green-bg-color{
+    background-color: #22d77e;
+}
+
 .blue-org{
     color: #62b4fe;
 }
@@ -319,6 +323,9 @@ section{
     flex-direction: column;
     border-radius: 12pt;
     text-align: center;
+}
+
+.it-card{
     box-shadow: 0px 7px 18px rgba(0, 0, 0, 0.19);
 }
 
@@ -327,7 +334,7 @@ section{
     margin: auto;
 }
 
-.card-item h1{
+.it-card h1{
     font-size: 20pt;
     padding:0px;
     margin-bottom: 0px;
@@ -335,13 +342,12 @@ section{
     font-family: cloud-b;
 }
 
-.card-item p{
+.it-card p{
     font-size: 13pt;
     color: #5d5d5d;
 }
 
 .card-btn{
-    background-color: #fdc82c;
     border: none;
     margin-top: 10px;
     border-radius: 10000px;
@@ -478,6 +484,105 @@ section{
 }
 
 
+/*Section 5*/
+#section5{
+        padding-top: 40px;
+    padding-bottom: 100px;
+}
+.workshop-card{
+    border:1px solid #d0c5c5;    
+    border-radius: 30px;
+    height: auto;
+}
+
+.workshop-card h1{
+    font-size: 30pt;
+    padding:0px;
+    margin-bottom: 0px;
+    color: #515252;
+    font-family: cloud-b;
+    margin-bottom: 10px;
+}
+
+.workshop-card h2{
+    margin-bottom: 0;
+    font-size: 18px;
+    padding-bottom: 9px;
+    color: #848484;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.workshop-card p{
+    font-size: 13pt;
+    text-align: left;
+    color: #9c9c9c;
+}
+
+
+/*Section6*/
+#section6{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #000;
+}
+
+.bg-club{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg-club.jpg);
+    background-size: cover;
+    opacity: 0.1;
+}
+
+.club-card{
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    height: auto;
+    width: 97% !important;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.club-card h1{
+    font-size: 20pt;
+    padding:0px;
+    margin-bottom: 0px;
+    color: #515252;
+    font-family: cloud-b;
+    margin-bottom: 10px;
+}
+
+.club-card h2{
+    margin-bottom: 0;
+    font-size: 14pt;
+    padding-bottom: 9px;
+    color: #848484;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.club-card p{
+    font-size: 11pt;
+    text-align: left;
+    color: #717171;
+    width: 70%;
+    margin: auto;
+}
+
+
+.club-card-btn{
+    border: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #3a3a3a;
+    font-family: cloud-b;
+    font-size: 14pt;
+    background: none;
+    border-top: 1px solid #cccccc;
+}
 
 
 
@@ -500,12 +605,32 @@ section{
 @media screen and (max-width: 1024px){
     
     .card-battle-item{
-        width: 100%%;
+        width: 100%;
         float: left;
         margin-right: 2% !important;
         margin-bottom: 30px !important;
         margin: auto;
     }
+
+
+    .logo{
+        width: 100%;
+    }
+    .btn-group{
+        display: block !important;
+    }
+    .btn-jumbo{
+        width: 100% !important;
+        border-radius: 0 !important;
+        margin-left: 0px !important;
+        margin-bottom: 30px !important;
+        font-size: 4em !important;
+    }
+
+    .jumbobuttons{
+        margin-top: 10px;
+    }
+    
 }
 
 @media screen and (max-width: 700px){
@@ -514,8 +639,53 @@ section{
         margin: auto;
     }
 
+    .btn-jumbo{
+        width: 100% !important;
+        border-radius: 0 !important;
+        margin-left: 0px !important;
+        margin-bottom: 20px !important;
+        font-size: 2em !important;
+    }
+
+
     .card-battle-item{
         width: 100%;
         margin: auto;
+    }
+
+    #nav-btn {
+     padding: 20px; 
+    }
+
+    #navbar{
+        
+    width: 100%;
+    position: absolute;
+    }
+
+    #navbar ul{
+        margin:0px;
+    }
+
+    #navbar ul li{
+           background-color: #2986c9;
+    border-bottom: 1px solid #61aade;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    } 
+
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+        border:none;s
+    }
+
+    #navbar ul li a{
+           color: #fff !important;
+    }
+
+    .club-card-btn{
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
     }
 }
