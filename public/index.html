@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
@@ -70,7 +71,7 @@
             <div class="jumbobuttons text-center">
                 <div class="btn-group">
                     <button type="button" class="btn btn-blue btn-jumbo btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ลงทะเบียนเข้าชม</button>
-                    <ul class="dropdown-menu">
+                    <ul class="register-dropdown dropdown-menu">
                         <li><a href="https://openhouse.it.kmitl.ac.th/2016/register/guest_student">นักเรียน/นักศึกษา</a></li>
                         <li><a href="https://openhouse.it.kmitl.ac.th/2016/register/guest_school">โรงเรียน</a></li>
                         <li><a href="https://openhouse.it.kmitl.ac.th/2016/register/guest">บุคคลทั่วไป</a></li>
@@ -87,12 +88,34 @@
 
     <section id="section2">
         <div class="container">
+            <div class="intro-gallery">
+                <div class="gallery-item owl-carousel owl-theme">
+                    <img class="hilight-img owl-lazy" data-src="images/OPH2016/highlight-1.jpg">
+                    <img class="hilight-img owl-lazy" data-src="images/OPH2016/highlight-2.jpg">
+                    <img class="hilight-img owl-lazy" data-src="images/OPH2016/highlight-3.jpg" alt="">
+                    <img class="hilight-img owl-lazy" data-src="images/OPH2016/highlight-4.jpg" alt="">
+
+                </div>
+
+                <script>
+                    $('.owl-carousel').owlCarousel({
+                        items: 4,
+                        lazyLoad: true,
+                        margin: 10,
+                        responsiveClass: true,
+                        responsive: {
+                            0: {
+                                items: 1,
+                            },
+                            1024: {
+                                items: 4,
+                            },
+                        }
+                    });
+                </script>
+            </div>
             <div class="intro">
-
-
-
-
-                <div class="intro-word">
+                <div class="intro-word animated">
                     <div class="title">
                         <h1>เลือกเรียน เปลี่ยนชีวิต
                             <div class="under-line blue-bg-color">
@@ -106,7 +129,11 @@
 
                     <button type="button" class="btn btn-org btn-jumbo" style="margin-top: 30px;">กำหนดการ</button>
                     <div class="qouet">
-                        <h1>"</h1>
+                        <span>"</span>
+                    </div>
+
+                    <div class="qouet-2">
+                        <span>"</span>
                     </div>
                 </div>
 
@@ -142,20 +169,27 @@
                 <img src="images/icon/mortarboard.svg" alt="">
                 <h1>To Be IT@KMITL</h1>
                 <p>เตรียมความพร้อมสู่ไอทีลาดกระบัง</p>
-                <button class="org-bg-color card-btn" data-toggle="modal" data-target="#myModal">รายละเอียด</button>
+                <button class="org-bg-color card-btn" data-toggle="modal" data-target="#it-card-model-1">รายละเอียด</button>
             </div>
 
             <!-- Modal 1 -->
-            <div id="myModal" class="modal fade" role="dialog">
+            <div id="it-card-model-1" class="modal fade" role="dialog">
                 <div class="modal-dialog">
 
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Modal Header</h4>
+                            <h1 class="h-light text-center">To Be IT@KMIT</h1>
                         </div>
                         <div class="modal-body">
-                            <p>Some text in the modal.</p>
+                            <h2>เตรียมความพร้อมสู่ไอทีลาดกระบัง</h2>
+                            <p>สัมมนาเตรียมความพร้อมสู่ไอทีลาดกระบัง “ToBeIT@KMITL” เพื่อการเตรียมสอบเข้าคณะเทคโนโลยีสารสนเทศ
+                                สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง, การปรับตัวในการเรียนมหาวิทยาลัย และไขข้อข้องใจกับพี่ๆ
+                                นักศึกษาไอทีลาดกระบังทุกชั้นปี
+                                <div class="alert alert-info text-center">
+                                    ผู้ที่สนใจสามารถเข้าชมได้ในวันศุกร์ที่ 26 สิงหาคม 2559 บริเวณด้านหน้าห้องประชุม Auditorium อาคารคณะเทคโนโลยีสารสนเทศ
+                                </div>
+                            </p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -164,25 +198,110 @@
 
                 </div>
             </div>
+
+            <!-- Item 2 -->
             <div class="it-card card-item">
                 <img src="images/icon/presentation.svg" alt="">
                 <h1>การแสดงนิทรรศการทางวิชาการ</h1>
                 <p>ผลงานนักศึกษาและคณาจารย์</p>
-                <button class="org-bg-color card-btn">รายละเอียด</button>
+                <button class="org-bg-color card-btn" data-toggle="modal" data-target="#it-card-model-2">รายละเอียด</button>
+            </div>
+            <!-- Modal 2 -->
+            <div id="it-card-model-2" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h1 class="h-light text-center">การแสดงนิทรรศการทางวิชาการ</h1>
+                        </div>
+                        <div class="modal-body">
+                            <h2>ผลงานนักศึกษาและคณาจารย์</h2>
+                            <p>คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ได้มีการนำผลงานต่างๆ ของนักศึกษาระดับปริญญาตรี,
+                                ปริญญาโท และ ปริญญาเอก รวมทั้งงานวิจัยของอาจารย์ในคณะฯ มาจัดแสดงให้ผู้ที่สนใจได้ชมและศึกษา
+                                บริเวณโถงชั้นล่างอาคารคณะฯ </br>
+                                </br> ทุกท่านจะได้รับทั้งความรู้ในเชิงวิชาการจากทั้งจากผลงานของนักศึกษา, งานวิจัยภายในคณะ รวมถึงผู้สนับสนุนต่างๆ
+                                ที่จะนำเทคโนโลยีและนวัตกรรมใหม่ๆ ผู้เข้าร่วมงานทุกท่าน ได้สัมผัสกันอย่างใกล้ชิด
+                                <div class="alert alert-info text-center">
+                                    ผู้ที่สนใจสามารถเข้าชมได้ในวันศุกร์ที่ 26 สิงหาคม 2559 บริเวณโถงชั้นล่างของอาคารคณะฯ ตลอดทั้งวัน
+                                </div>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
+            <!-- Item 3 -->
             <div class="it-card card-item">
                 <img src="images/icon/search.svg" alt="">
                 <h1>ทัวร์คณะ</h1>
                 <p>นำชมคณะไอทีลาดกระบัง</p>
-                <button class="org-bg-color card-btn">รายละเอียด</button>
+                <button class="org-bg-color card-btn" data-toggle="modal" data-target="#it-card-model-3">รายละเอียด</button>
+            </div>
+            <!-- Modal 3 -->
+            <div id="it-card-model-3" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h1 class="h-light text-center">ทัวร์คณะ</h1>
+                        </div>
+                        <div class="modal-body">
+                            <h2>นำชมคณะไอทีลาดกระบัง</h2>
+                            <p>ทัวร์ที่จะพาทุกท่านไป เยี่ยมชมสถานที่จริง ไม่ว่าจะเป็น ห้องเรียน, ห้องปฏิบัติการ (Lab), ห้องเซิร์ฟเวอร์,
+                                ชุมนุมของนักศึกษา และสิ่งอำนวยความสะดวกต่างๆ ภายในคณะเทคโนโลยีสารสนเทศ แบบทุกซอกทุกมุม โดยทางคณะได้มีการจัดทีมนำชมสถานที่ซึ่งมีนักศึกษาเป็นวิทยากรนำชมสถานที่
+                                และแบ่งออกเป็นรอบ รอบละ 10 - 15 นาที
+                                <div class="alert alert-info text-center">
+                                    ผู้ที่สนใจสามารถเข้าชมได้ในวันศุกร์ที่ 26 สิงหาคม 2559 บริเวณโถงชั้นล่างของอาคารคณะฯ ตลอดทั้งวัน
+                                </div>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
+            <!-- Item 4 -->
             <div class="it-card card-item">
                 <img src="images/icon/books.svg" alt="">
                 <h1>แนะนำหลักสูตรไอทีลาดกระบัง</h1>
                 <p>หลักสูตรทางด้านคอมพิวเตอร์</p>
-                <button class="org-bg-color card-btn">รายละเอียด</button>
+                <button class="org-bg-color card-btn" data-toggle="modal" data-target="#it-card-model-4">รายละเอียด</button>
+            </div>
+            <!-- Modal 4 -->
+            <div id="it-card-model-4" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h1 class="h-light text-center">แนะนำหลักสูตรไอทีลาดกระบัง</h1>
+                        </div>
+                        <div class="modal-body">
+                            <h2>หลักสูตรทางด้านคอมพิวเตอร์</h2>
+                            <p>การบรรยาย "แนะแนวอาชีพและการศึกษาต่อด้านคอมพิวเตอร์และเทคโนโลยีสารสนเทศ" เชิญพบปะพูดคุยกับอาจารย์และนักศึกษาของคณะเทคโนโลยีสารสนเทศ
+                                สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ในหัวข้อข้อความแตกต่างของหลักสูตรระหว่างสาขาวิชาวิทยาการคอมพิวเตอร์,
+                                วิศวกรรมคอมพิวเตอร์, วิศวกรรมสารสนเทศ และ เทคโนโลยีสารสนเทศ พร้อมทั้งเปิดโอกาสให้ผู้ร่วมงานสอบถามข้อมูลต่างๆ
+                                ของหลักสูตรในคณะเทคโนโลยีสารสนเทศ
+                                <div class="alert alert-info text-center">
+                                    ผู้ที่สนใจสามารถเข้าชมได้ในวันศุกร์ที่ 26 สิงหาคม 2559 บริเวณด้านหน้าห้องประชุม Auditorium อาคารคณะเทคโนโลยีสารสนเทศ
+                                </div>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
@@ -310,20 +429,26 @@
                     </div>
                 </h1>
                 <p>ในเวิร์คชอปนี้ น้อง ๆ จะได้รู้จักกับเทคโนโลยี AR และได้เรียนรู้วิธีการสร้างเกมโดยใช้ AR </p>
-                <button class="green-bg-color card-btn" data-toggle="modal" data-target="#myModal">รายละเอียด</button>
+                <button class="green-bg-color workshop-btn card-btn" data-toggle="modal" data-target="#workshop-1">รายละเอียด</button>
             </div>
 
             <!-- Modal 1 -->
-            <div id="myModal" class="modal fade" role="dialog">
+            <div id="workshop-1" class="modal fade" role="dialog">
                 <div class="modal-dialog">
 
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Modal Header</h4>
+                            <h1 class="h-light text-center">AR Animate : ขยับขับเคลื่อนด้วย AR </h1>
                         </div>
                         <div class="modal-body">
-                            <p>Some text in the modal.</p>
+                            <p>AR Animate : ขยับขับเคลื่อนด้วย AR ในเวิร์คชอปนี้ น้อง ๆ จะได้รู้จักกับเทคโนโลยี AR (Augmented
+                                Reality) และได้เรียนรู้วิธีการสร้างเกมโดยใช้ AR ด้วยโปรแกรมง่าย ๆ รวมทั้งฝึกทักษะการเขียนโปรแกรมควบคุมการเคลื่อนไหวของตัวการ์ตูนกราฟฟิกที่ถูกสร้างขึ้นภายใต้
+                                AR
+                            </p>
+                            <div class="alert alert-info text-center">
+                                น้อง ๆ สามารถนำความรู้จากเวิร์คชอปนี้ ไปสร้างเกมที่เสมือนจริงได้ด้วยตนเอง
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -332,17 +457,50 @@
 
                 </div>
             </div>
+
+            <!-- Item 2 -->
             <div class="workshop-card card-item">
                 <h2>NETWORKS</h2>
                 <h1>เชื่อมต่อทุกสรรพสิ่งด้วย IoT
                     <div class="under-line green-bg-color">
                     </div>
                 </h1>
-                <p>ในเวิร์คชอปนี้ น้อง ๆ จะได้เรียนรู้วิธีการประยุกต์ใช้เทคโนโลยี IoT หรืออินเตอร์เน็ทของสรรพสิ่ง ในการเชื่อมต่อเข้ากับอินเตอร์เน็ท
+                <p>ในเวิร์คชอปนี้ น้อง ๆ จะได้เรียนรู้วิธีการประยุกต์ใช้เทคโนโลยี IoT หรืออินเตอร์เน็ทของสรรพสิ่ง...
                 </p>
-                <button class="green-bg-color card-btn ">รายละเอียด</button>
+                <button class="green-bg-color workshop-btn card-btn" data-toggle="modal" data-target="#workshop-2">รายละเอียด</button>
+            </div>
+            <!-- Modal 2 -->
+            <div id="workshop-2" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h1 class="h-light text-center">IoT Connecting Things : เชื่อมต่อทุกสรรพสิ่งด้วย IoT </h1>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                ในเวิร์คชอปนี้ น้อง ๆ จะได้เรียนรู้วิธีการประยุกต์ใช้เทคโนโลยี IoT หรืออินเตอร์เน็ทของสรรพสิ่ง ในการเชื่อมต่อเข้ากับอินเตอร์เน็ท
+                                เพื่อส่งข้อมูลที่ตรวจจับได้จากอุปกรณ์เซ็นเซอร์ ไปเก็บไว้ยังเครื่องคอมพิวเตอร์บนคราวด์ (Cloud)
+                                สำหรับให้น้อง ๆ สามารถเข้ามาตรวจสอบ หรือสามารถแจ้งเตือน ผ่านทางเครื่องคอมพิวเตอร์ โทรศัพท์มือถือ
+                                หรือแทปเล็ทได้ในทุกที่ผ่านทางอินเตอร์เน็ท
+                            </p>
+                            <p>
+                                หลังจากจบเวิร์คชอปนี้แล้ว น้อง ๆ จะเข้าใจพื้นฐานการทำงานของเทคโนโลยี IoT ซึ่งพบเห็น ในปัจจุบัน เช่น Smart home, Smart farm,
+                                Healthcare monitoring เป็นต้น
+
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
+
+            <!-- Item 3 -->
             <div class="workshop-card card-item">
                 <h2>SOFTWARE ENGINEERING</h2>
                 <h1>ใส่กึ๋นให้เลโก้
@@ -350,9 +508,37 @@
                     </div>
                 </h1>
                 <p>ในเวิร์คชอปนี้ น้อง ๆ จะได้เรียนรู้ทักษะการเขียนโปรแกรมภาษาจาวา เพื่อใช้ในการควบคุมการทำงานของเซ็นเซอร์ </p>
-                <button class="green-bg-color card-btn ">รายละเอียด</button>
+                <button class="green-bg-color workshop-btn card-btn" data-toggle="modal" data-target="#workshop-3">รายละเอียด</button>
+            </div>
+            <!-- Modal 3 -->
+            <div id="workshop-3" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h1 class="h-light text-center">Give a Brain to LEGO : ใส่กึ๋นให้เลโก้ </h1>
+                        </div>
+                        <div class="modal-body">
+                            <p>ในเวิร์คชอปนี้ น้อง ๆ จะได้เรียนรู้ทักษะการเขียนโปรแกรมภาษาจาวา เพื่อใช้ในการควบคุมการทำงานของเซ็นเซอร์
+                                (Sensor) และแอคทูเอเตอร์ (Actuator) ชนิดต่าง ๆ ผ่านทางอุปกรณ์ควบคุมของเลโก้ (LEGO NXT Brick
+                                Controller)
+                            </p>
+                            <p>
+                                นอกจากนี้ น้อง ๆ ยังจะได้ทดลองเขียนโปรแกรมเพื่อใส่ความคิดลงไปให้กับหุ่นยนต์เลโก้ เพื่อให้มันสามารถปฏิบัติพันธกิจ (Mission)
+                                ได้ตามที่กำหนด
+
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
+            <!-- Item 4 -->
             <div class="workshop-card card-item">
                 <h2>DATA SCIENCE </h2>
                 <h1>ตามหาโปเกม่อนด้วยวิทยาการข้อมูล
@@ -360,8 +546,30 @@
                     </div>
                 </h1>
                 <p>ในเวิร์คชอปนี้ น้อง ๆ จะได้เรียนรู้ การใช้ข้อมูลการเกิดของโปเกม่อนที่หายาก มาพยากรณ์การเกิดในอนาคต </p>
-                <button class="green-bg-color card-btn ">รายละเอียด</button>
+                <button class="green-bg-color workshop-btn card-btn" data-toggle="modal" data-target="#workshop-4">รายละเอียด</button>
             </div>
+            <!-- Modal 4 -->
+            <div id="workshop-4" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h1 class="h-light text-center">Data Science finds Pokemon : ตามหาโปเกม่อนด้วยวิทยาการข้อมูล</h1>
+                        </div>
+                        <div class="modal-body">
+                            <p>ในเวิร์คชอปนี้ น้อง ๆ จะได้เรียนรู้ การใช้ข้อมูลการเกิดของโปเกม่อนที่หายาก มาพยากรณ์การเกิดในอนาคต
+                                เพื่อที่เราจะได้ไปดักจับมันที่ตำแหน่งที่ดีที่สุด ด้วยวิทยาการข้อมูล
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
 
     </section>
@@ -378,7 +586,7 @@
                     </div>
                 </h1>
             </div>
-            <div class="owl-carousel owl-theme">
+            <div class="owl-club-padding owl-carousel owl-theme">
                 <!--ITEM 1-->
                 <div class="item club-card card-item">
                     <div class="club-card-img">
@@ -389,7 +597,7 @@
                         </div>
                     </h1>
                     <p>
-                        IT นั้นย่อมาจาก Information Technology แปลว่า เทคโนโลยีสารสนเทศ ส่วน Forge...
+                        IT นั้นย่อมาจาก Information Technology แปลว่า...
                     </p>
                     <button class="green-bg-color club-card-btn ">ดูเพิ่มเติม</button>
                 </div>
@@ -403,8 +611,7 @@
                         <div class="under-line org-bg-color">
                         </div>
                     </h1>
-                    <p>สมัยนี้ อนิเมชั่นหรือการ์ตูนต่างๆเป็นสื่อที่อยู่ใกล้ตัว และเป็นที่รู้จักมากขึ้น...
-                    </p>
+                    <p>สมัยนี้ อนิเมชั่นหรือการ์ตูนต่างๆเป็นสื่อที่อยู่ใกล้ตัว... </p>
                     <button class="green-bg-color club-card-btn ">ดูเพิ่มเติม</button>
                 </div>
 
@@ -418,7 +625,7 @@
                         </div>
                     </h1>
                     <p>
-                        สันทนาการคืออะไร? น้องๆหลายคนอาจจะสงสัยว่า "สันทนาการ" คืออะไร เรามารู้จักกัน...
+                        สันทนาการคืออะไร? น้องๆหลายคนอาจจะสงสัยว่า "สันทนาการ" คือ...
                     </p>
                     <button class="green-bg-color club-card-btn ">ดูเพิ่มเติม</button>
                 </div>
@@ -432,7 +639,7 @@
                         <div class="under-line org-bg-color">
                         </div>
                     </h1>
-                    <p>ในโอกาสพิเศษต่างๆ ไม่ว่าจะเป็นงานนิทรรศการ งานวิชาการ งานกีฬา หรืองานพิธีสำคัญ...
+                    <p>ในโอกาสพิเศษต่างๆ ไม่ว่าจะเป็นงานนิทรรศการ งานวิชาการ...
                     </p>
                     <button class="green-bg-color club-card-btn ">ดูเพิ่มเติม</button>
                 </div>
@@ -446,11 +653,11 @@
                         <div class="under-line org-bg-color">
                         </div>
                     </h1>
-                    <p>น้องๆหลายคนเมื่อได้ยินชื่อชุมนุม Inphonic อาจจะงงกันว่าคือชุมนุมอะไร...
+                    <p>น้องๆหลายคนเมื่อได้ยินชื่อชุมนุม Inphonic...
                     </p>
                     <button class="club-card-btn ">ดูเพิ่มเติม</button>
                 </div>
-                
+
             </div>
 
             <script>
@@ -472,15 +679,15 @@
                     }
                 });
 
-//         var owl = $('.owl-carousel');
-//         owl.owlCarousel({
-//             items:4,
-//             loop:true,
-//             margin:10,
-//             autoplay:true,
-//             autoplayTimeout:1000,
-//             autoplayHoverPause:true
-// });
+                //         var owl = $('.owl-carousel');
+                //         owl.owlCarousel({
+                //             items:4,
+                //             loop:true,
+                //             margin:10,
+                //             autoplay:true,
+                //             autoplayTimeout:1000,
+                //             autoplayHoverPause:true
+                // });
             </script>
         </div>
     </section>
@@ -492,12 +699,74 @@
             <div class="blue-screen">
             </div>
 
+            <div class="title white-color">
+                <h1>ภาพบบรรยากาศภายในงาน
+                    <div class="under-line white-bg-color">
+                    </div>
+                </h1>
+            </div>
+
             <div class="gallery">
+                <div class="gallery-item owl-carousel owl-theme">
+                    <img class="owl-lazy" data-src="images/OPH2016/1.jpg" alt="">
+                    <img class="owl-lazy" data-src="images/OPH2016/2.jpg" alt="">
+                    <img class="owl-lazy" data-src="images/OPH2016/3.jpg" alt="">
+                    <img class="owl-lazy" data-src="images/OPH2016/4.jpg" alt="">
+                    <img class="owl-lazy" data-src="images/OPH2016/5.jpg" alt="">
+                    <img class="owl-lazy" data-src="images/OPH2016/6.jpg" alt="">
+                    <img class="owl-lazy" data-src="images/OPH2016/7.jpg" alt="">
+                    <img class="owl-lazy" data-src="images/OPH2016/1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            items: 2,
+            lazyLoad: true,
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                1024: {
+                    items: 2,
+                },
+            }
+        });
+    </script>
+
+
+
+    <section id="section8">
+        <div class="wrapper">
+            <div class="sponsor">
+
+                <img src="images/sponsor/01_cdg.svg" alt="">
+                <img src="images/sponsor/02_vmware.svg" alt="">
+                <img src="images/sponsor/03_AIT.svg" alt="">
+                <img src="images/sponsor/04_lactasoy.svg" alt="">
+                <img src="images/sponsor/05_camphub.svg" alt="">
+                <img src="images/sponsor/06_bks.svg" alt="">
 
             </div>
         </div>
     </section>
 
+    <footer>
+        <div class="wrapper">
+            <div class="footer-left">©2016 Faculty of Information Technology, KMITL</div>
+            <div class="footer-right">
+
+                <p><a href="">2012</a> |
+                    <a href="">2013</a> |
+                    <a href="">2014</a> |
+                    <a href="">2016</a> |
+                    <a href="">2017 | Developer</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
