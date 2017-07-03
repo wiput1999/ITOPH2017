@@ -81,12 +81,12 @@ $(document).ready(function () {
         }
 
 
-        if (ScrollTop > sec2) {
-            $(".intro-word").addClass("bounceInUp").css("opacity", "1");
-            for (i = 1; i <= 4; i++) {
-                $(".hilight-" + i).addClass("bounceInUp").css("opacity", "1");
-            }
-        }
+        // if (ScrollTop > sec2) {
+        //     $(".intro-word").addClass("bounceInUp").css("opacity", "1");
+        //     for (i = 1; i <= 4; i++) {
+        //         $(".hilight-" + i).addClass("bounceInUp").css("opacity", "1");
+        //     }
+        // }
 
         // if (ScrollTop > sec3 && ScrollTop < sec5) {
         //     $("#navbar ul li a").css("color","#fff");

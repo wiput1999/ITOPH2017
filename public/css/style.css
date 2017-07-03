@@ -88,7 +88,9 @@ section {
     float: left;
     width: 100%;
 }
-
+.btn{
+    transition:all .5s ease;
+}
 .title {
     width: 100%;
     margin: 0 auto;
@@ -297,7 +299,6 @@ section {
     float: left;
     box-shadow: 0px -6px 43px rgba(0, 0, 0, 0.04);
     border-radius: 30px 30px 0px 0px;
-    opacity: 0;
 }
 
 .intro-word p {
@@ -407,7 +408,7 @@ section {
 }
 
 .it-card:hover {
-    top: 15px;
+    top: -15px;
 }
 
 .card-item img {
@@ -651,6 +652,7 @@ section {
     text-align: left;
     color: #9c9c9c;
 }
+
 
 
 /*Section6*/
