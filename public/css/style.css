@@ -8,6 +8,12 @@
     src: url(../fonts/Cloud-Bold.otf);
 }
 
+
+@font-face{
+    font-family: cschat;
+    src:url(../fonts/CSChatThaiUI.ttf);
+}
+
 *,
 *:before,
 *:after {
@@ -19,6 +25,7 @@
 body {
     margin: 0px;
     padding: 0px;
+    font-family: cschat;
 }
 
 
@@ -35,6 +42,7 @@ h5 {
 
 p{
      text-indent: 1.5em;
+     font-family: cschat;
 }
 
 .modal-body p{
@@ -473,7 +481,6 @@ section {
     z-index: 1;
     opacity: 0.1;
     bottom: -100px;
-    width: 100%;
     text-align: center;
 }
 
@@ -831,6 +838,8 @@ footer {
     -webkit-hyphens: auto;
     hyphens: auto;
     border-radius: 10px;
+            font-family: "cschat";
+        font-size: 18px;
 }
 
 .register{
