@@ -1,70 +1,10 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IT KMITL OPH 2017</title>
-    <!-- JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-</head>
-
-<body>
-
-    <header>
-        <!-- Static navbar -->
-        <nav id="menu" class="navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" id="nav-btn" class="hamberger navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                        aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-                        </button>
-                    <a class="navbar-brand" href="#section1">
-                            <img width="100" src="images/logo-sym.svg" alt="">
-                    </a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#section1">หน้าหลัก</a></li>
-                        <li><a href="../navbar-fixed-top/">กำหนดการ</a></li>
-                        <li><a href="#section4">การแข่งขัน</a></li>
-                        <li><a href="../navbar-fixed-top/">การเดินทาง</a></li>
-                        <li><a href="../navbar-fixed-top/">ติดต่อ</a></li>   
-                    </ul>
-                </div>
-                <!--/.nav-collapse -->
-            </div>
-            <!--/.container-fluid -->
-        </nav>
-
-
-        <div class="fac-name">
-            <h1>Faculty of Information Technology</h1>
-            <h2>king mongkut's institute of technology ladkrabang</h2>
-        </div>
-    </header>
+@extends('layout.partial')
+@section('content')
     <!-- Main component for a primary marketing message or call to action -->
     <section id="section1">
         <div class="container">
             <div class="logo">
-                <img src="images/logo.svg" alt="">
+                <img src="{{URL('/assets/images/logo.svg')}}" alt="">
             </div>
             <div class="time-date">
                 <h2 class="text-center">1 กันยายน 2560</h2>
@@ -75,9 +15,9 @@
                 <div class="btn-group">
                     <button type="button" class="btn btn-blue btn-jumbo btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ลงทะเบียนเข้าชม</button>
                     <ul class="register-dropdown dropdown-menu" style="top: 70px; border-radius:10px;">
-                        <li><a href="https://openhouse.it.kmitl.ac.th/2016/register/guest_student">นักเรียน/นักศึกษา</a></li>
-                        <li><a href="https://openhouse.it.kmitl.ac.th/2016/register/guest_school">โรงเรียน</a></li>
-                        <li><a href="https://openhouse.it.kmitl.ac.th/2016/register/guest">บุคคลทั่วไป</a></li>
+                        <li><a href="{{URL('/register/guest_student')}}">นักเรียน/นักศึกษา</a></li>
+                        <li><a href="{{URL('/register/guest_school')}}">โรงเรียน</a></li>
+                        <li><a href="{{URL('/register/guest')}}">บุคคลทั่วไป</a></li>
                     </ul>
                 </div>
 
@@ -95,10 +35,10 @@
         <div class="container">
             <div class="intro-gallery">
                 <div class="gallery-item owl-carousel owl-theme">
-                    <img class="hilight-img owl-lazy" data-src="images/OPH2016/highlight-1.png">
-                    <img class="hilight-img owl-lazy" data-src="images/OPH2016/highlight-2.png">
-                    <img class="hilight-img owl-lazy" data-src="images/OPH2016/highlight-3.png" alt="">
-                    <img class="hilight-img owl-lazy" data-src="images/OPH2016/highlight-4.png" alt="">
+                    <img class="hilight-img owl-lazy" data-src="{{URL('/assets/images/OPH2016/highlight-1.png')}}" alt="">
+                    <img class="hilight-img owl-lazy" data-src="{{URL('/assets/images/OPH2016/highlight-2.png')}}" alt="">
+                    <img class="hilight-img owl-lazy" data-src="{{URL('/assets/images/OPH2016/highlight-3.png')}}" alt="">
+                    <img class="hilight-img owl-lazy" data-src="{{URL('/assets/images/OPH2016/highlight-4.png')}}" alt="">
 
                 </div>
 
@@ -132,7 +72,7 @@
                         และอีกมากมาย
                     </p>
 
-                    <button type="button" class="btn btn-org btn-jumbo" style="margin-top: 30px;">กำหนดการ</button>
+                    <a class="btn btn-org btn-jumbo" href="{{URL('/schedule')}}" style="margin-top: 30px;">กำหนดการ</a>
                     <div class="qouet">
                         <span>"</span>
                     </div>
@@ -171,7 +111,7 @@
             </div>
             <!-- Item 1 -->
             <div class="it-card card-item">
-                <img src="images/icon/mortarboard.svg" alt="">
+                <img src="{{URL('/assets/images/icon/mortarboard.svg')}}" alt="">
                 <h1>To Be IT@KMITL</h1>
                 <p>เตรียมความพร้อมสู่ไอทีลาดกระบัง</p>
                 <button class="org-bg-color card-btn" data-toggle="modal" data-target="#it-card-model-1">รายละเอียด</button>
@@ -191,9 +131,9 @@
                             <p>สัมมนาเตรียมความพร้อมสู่ไอทีลาดกระบัง “ToBeIT@KMITL” เพื่อการเตรียมสอบเข้าคณะเทคโนโลยีสารสนเทศ
                                 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง, การปรับตัวในการเรียนมหาวิทยาลัย และไขข้อข้องใจกับพี่ๆ
                                 นักศึกษาไอทีลาดกระบังทุกชั้นปี
-                                <div class="alert alert-info text-center">
-                                    ผู้ที่สนใจสามารถเข้าชมได้ในวันศุกร์ที่ 26 สิงหาคม 2559 บริเวณด้านหน้าห้องประชุม Auditorium อาคารคณะเทคโนโลยีสารสนเทศ
-                                </div>
+                            <div class="alert alert-info text-center">
+                                ผู้ที่สนใจสามารถเข้าชมได้ในวันศุกร์ที่ 1 กันยายน 2560 บริเวณด้านหน้าห้องประชุม Auditorium อาคารคณะเทคโนโลยีสารสนเทศ
+                            </div>
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -206,7 +146,7 @@
 
             <!-- Item 2 -->
             <div class="it-card card-item">
-                <img src="images/icon/presentation.svg" alt="">
+                <img src="{{URL('/assets/images/icon/presentation.svg')}}" alt="">
                 <h1>การแสดงนิทรรศการทางวิชาการ</h1>
                 <p>ผลงานนักศึกษาและคณาจารย์</p>
                 <button class="org-bg-color card-btn" data-toggle="modal" data-target="#it-card-model-2">รายละเอียด</button>
@@ -227,9 +167,9 @@
                                 บริเวณโถงชั้นล่างอาคารคณะฯ </br>
                                 </br> ทุกท่านจะได้รับทั้งความรู้ในเชิงวิชาการจากทั้งจากผลงานของนักศึกษา, งานวิจัยภายในคณะ รวมถึงผู้สนับสนุนต่างๆ
                                 ที่จะนำเทคโนโลยีและนวัตกรรมใหม่ๆ ผู้เข้าร่วมงานทุกท่าน ได้สัมผัสกันอย่างใกล้ชิด
-                                <div class="alert alert-info text-center">
-                                    ผู้ที่สนใจสามารถเข้าชมได้ในวันศุกร์ที่ 26 สิงหาคม 2559 บริเวณโถงชั้นล่างของอาคารคณะฯ ตลอดทั้งวัน
-                                </div>
+                            <div class="alert alert-info text-center">
+                                ผู้ที่สนใจสามารถเข้าชมได้ในวันศุกร์ที่ 1 กันยายน 2560 บริเวณโถงชั้นล่างของอาคารคณะฯ ตลอดทั้งวัน
+                            </div>
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -242,7 +182,7 @@
 
             <!-- Item 3 -->
             <div class="it-card card-item">
-                <img src="images/icon/search.svg" alt="">
+                <img src="{{URL('/assets/images/icon/search.svg')}}" alt="">
                 <h1>ทัวร์คณะ</h1>
                 <p>นำชมคณะไอทีลาดกระบัง</p>
                 <button class="org-bg-color card-btn" data-toggle="modal" data-target="#it-card-model-3">รายละเอียด</button>
@@ -261,9 +201,9 @@
                             <p>ทัวร์ที่จะพาทุกท่านไป เยี่ยมชมสถานที่จริง ไม่ว่าจะเป็น ห้องเรียน, ห้องปฏิบัติการ (Lab), ห้องเซิร์ฟเวอร์,
                                 ชุมนุมของนักศึกษา และสิ่งอำนวยความสะดวกต่างๆ ภายในคณะเทคโนโลยีสารสนเทศ แบบทุกซอกทุกมุม โดยทางคณะได้มีการจัดทีมนำชมสถานที่ซึ่งมีนักศึกษาเป็นวิทยากรนำชมสถานที่
                                 และแบ่งออกเป็นรอบ รอบละ 10 - 15 นาที
-                                <div class="alert alert-info text-center">
-                                    ผู้ที่สนใจสามารถเข้าชมได้ในวันศุกร์ที่ 26 สิงหาคม 2559 บริเวณโถงชั้นล่างของอาคารคณะฯ ตลอดทั้งวัน
-                                </div>
+                            <div class="alert alert-info text-center">
+                                ผู้ที่สนใจสามารถเข้าชมได้ในวันศุกร์ที่ 1 กันยายน 2560 บริเวณโถงชั้นล่างของอาคารคณะฯ ตลอดทั้งวัน
+                            </div>
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -276,7 +216,7 @@
 
             <!-- Item 4 -->
             <div class="it-card card-item">
-                <img src="images/icon/books.svg" alt="">
+                <img src="{{URL('/assets/images/icon/books.svg')}}" alt="">
                 <h1>แนะนำหลักสูตรไอทีลาดกระบัง</h1>
                 <p>หลักสูตรทางด้านคอมพิวเตอร์</p>
                 <button class="org-bg-color card-btn" data-toggle="modal" data-target="#it-card-model-4">รายละเอียด</button>
@@ -296,9 +236,9 @@
                                 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ในหัวข้อข้อความแตกต่างของหลักสูตรระหว่างสาขาวิชาวิทยาการคอมพิวเตอร์,
                                 วิศวกรรมคอมพิวเตอร์, วิศวกรรมสารสนเทศ และ เทคโนโลยีสารสนเทศ พร้อมทั้งเปิดโอกาสให้ผู้ร่วมงานสอบถามข้อมูลต่างๆ
                                 ของหลักสูตรในคณะเทคโนโลยีสารสนเทศ
-                                <div class="alert alert-info text-center">
-                                    ผู้ที่สนใจสามารถเข้าชมได้ในวันศุกร์ที่ 26 สิงหาคม 2559 บริเวณด้านหน้าห้องประชุม Auditorium อาคารคณะเทคโนโลยีสารสนเทศ
-                                </div>
+                            <div class="alert alert-info text-center">
+                                ผู้ที่สนใจสามารถเข้าชมได้ในวันศุกร์ที่ 26 สิงหาคม 2559 บริเวณด้านหน้าห้องประชุม Auditorium อาคารคณะเทคโนโลยีสารสนเทศ
+                            </div>
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -325,7 +265,7 @@
                 <div class=" col-xs-12 col-sm-6 col-md-4 ">
                     <div id="e-sport" class="battle-hover card-battle-item">
                         <div class="img-item-battle">
-                            <img src="images/icon/dota2.svg" alt="">
+                            <img src="{{URL('/assets/images/icon/dota2.svg')}}" alt="">
                         </div>
                         <div class="text-item-battle">
                             <h1>E-SPORT
@@ -333,7 +273,9 @@
                             </h1>
                             <p>แข่งขันเกม DOTA2 ในโหมด CAPTAIN เวอร์ชันที่ใช้แข่งคือ Tournament, การแข่งขันเป็นแบบแพ้ตกรอบ รายละเอียด
                             </p>
-                            <button class="card-battle-btn">สมัครแข่งขัน</button>
+                            <a href="/competition/esport">
+                                <button class="card-battle-btn">สมัครแข่งขัน</button>
+                            </a>
                         </div>
 
                     </div>
@@ -342,14 +284,16 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 ">
                     <div id="project-it" class="battle-hover card-battle-item">
                         <div class="img-item-battle">
-                            <img src="images/icon/dota2.svg" alt="">
+                            <img src="{{URL('/assets/images/icon/dota2.svg')}}" alt="">
                         </div>
                         <div class="text-item-battle">
                             <h1>การแข่งขันโครงงาน </h1>
                             <p>สร้างสรรค์โครงงานที่มีการนำเทคโนโลยีสารสนเทศเข้ามาใช้ ที่มีความน่าสนใจทั้งในเชิงการตลาดและเทคโนโลยี..
 
                             </p>
-                            <button class="card-battle-btn">สมัครแข่งขัน</button>
+                            <a href="/competition/project">
+                                <button class="card-battle-btn">สมัครแข่งขัน</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -357,14 +301,16 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 ">
                     <div id="network-it" class="battle-hover card-battle-item">
                         <div class="img-item-battle">
-                            <img src="images/icon/dota2.svg" alt="">
+                            <img src="{{URL('/assets/images/icon/dota2.svg')}}" alt="">
                         </div>
                         <div class="text-item-battle">
                             <h1>ความปลอดภัยระบบ</h1>
                             <p>รูปแบบการแข่งขันจะเป็นการหาช่องโหว่ของระบบเพื่อแก้ปัญหาภายในเวลาที่กำหนดให้...
 
                             </p>
-                            <button class="card-battle-btn">สมัครแข่งขัน</button>
+                            <a href="/competition/network">
+                                <button class="card-battle-btn">สมัครแข่งขัน</button>
+                            </a>
                         </div>
 
                     </div>
@@ -373,13 +319,15 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 ">
                     <div id="website-it" class="battle-hover card-battle-item">
                         <div class="img-item-battle">
-                            <img src="images/icon/dota2.svg" alt="">
+                            <img src="{{URL('/assets/images/icon/dota2.svg')}}" alt="">
                         </div>
                         <div class="text-item-battle">
                             <h1>การแข่งขันพัฒนาเว็บไซต์</h1>
                             <p>ให้ผู้แข่งขันพัฒนาเว็บไซต์ด้วยภาษา PHP ให้มีรายละเอียดตามที่โจทย์กำหนด...
                             </p>
-                            <button class="card-battle-btn">สมัครแข่งขัน</button>
+                            <a href="/competition/php">
+                                <button class="card-battle-btn">สมัครแข่งขัน</button>
+                            </a>
                         </div>
 
                     </div>
@@ -388,13 +336,15 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 ">
                     <div id="quiz-it" class="battle-hover card-battle-item">
                         <div class="img-item-battle">
-                            <img src="images/icon/dota2.svg" alt="">
+                            <img src="{{URL('/assets/images/icon/dota2.svg')}}" alt="">
                         </div>
                         <div class="text-item-battle">
                             <h1>แก้ปัญหาเชิงวิเคราะห์</h1>
                             <p>ผู้เข้าแข่งขันต้องเขียนผลลัพธ์และแนวคิดในการแก้ปัญหาลงในกระดาษคำตอบ และส่งกระดาษคำตอบภายในเวลาที่กำหนด...
                             </p>
-                            <button class="card-battle-btn">สมัครแข่งขัน</button>
+                            <a href="/competition/quiz">
+                                <button class="card-battle-btn">สมัครแข่งขัน</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -594,7 +544,7 @@
                 <!--ITEM 1-->
                 <div class="item club-card card-item">
                     <div class="club-card-img">
-                        <img src="images/club/1.png" alt="">
+                        <img src="{{URL('/assets/images/club/1.png')}}" alt="">
                     </div>
                     <h1>ชุมนุม IT Forge
                         <div class="under-line org-bg-color">
@@ -608,7 +558,7 @@
                 <!--ITEM 2-->
                 <div class="item club-card card-item">
                     <div class="club-card-img">
-                        <img src="images/club/2.jpg" alt="">
+                        <img src="{{URL('/assets/images/club/2.jpg')}}" alt="">
                     </div>
                     <h1>ชุมนุมวิจัยอนิเมและหมากกระดาน
                         <div class="under-line org-bg-color">
@@ -621,7 +571,7 @@
                 <!--ITEM 3-->
                 <div class="item club-card card-item">
                     <div class="club-card-img">
-                        <img src="images/club/3.jpg" alt="">
+                        <img src="{{URL('/assets/images/club/3.jpg')}}" alt="">
                     </div>
                     <h1>ชุมนุม AGAPE'
                         <div class="under-line org-bg-color">
@@ -636,7 +586,7 @@
                 <!--ITEM 4-->
                 <div class="item club-card card-item">
                     <div class="club-card-img">
-                        <img src="images/club/4.jpg" alt="">
+                        <img src="{{URL('/assets/images/club/4.jpg')}}" alt="">
                     </div>
                     <h1>ชุมนุม FOTO+ MAG
                         <div class="under-line org-bg-color">
@@ -650,7 +600,7 @@
                 <!--ITEM 5-->
                 <div class="item club-card card-item">
                     <div class="club-card-img">
-                        <img src="images/club/5.jpg" alt="">
+                        <img src="{{URL('/assets/images/club/5.jpg')}}" alt="">
                     </div>
                     <h1>ชุมนุม Inphonic
                         <div class="under-line org-bg-color">
@@ -675,7 +625,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="text-center">
-                                <img src="https://openhouse.it.kmitl.ac.th/2016/assets/new/img/itforge.png" class="itforge">
+                                <img src="{{URL('/assets/images/club/1.png')}}" class="itforge">
                             </div>
                             <hr>
                             <p>IT นั้นย่อมาจาก Information Technology แปลว่า เทคโนโลยีสารสนเทศ ส่วน Forge นั้นแปลว่า การตีเหล็ก
@@ -684,7 +634,7 @@
                             </p>
                             <br>
                             <div class="imggroup">
-                                <img src="https://openhouse.it.kmitl.ac.th/2016/assets/new/img/club-large/club-1-1.jpg" class="img-responsive">
+                                <img src="{{URL('/assets/images/club/1-1.jpg')}}" class="img-responsive">
                             </div>
                             <br>
                             <p>
@@ -715,10 +665,10 @@
                             <div class="imggroup">
                                 <div class="row rownominus">
                                     <div class="col-xs-12 col-md-6">
-                                        <img src="https://openhouse.it.kmitl.ac.th/2016/assets/new/img/club-large/club-2-1.jpg" class="img-responsive">
+                                        <img src="{{URL('/assets/images/club/2-1.jpg')}}" class="img-responsive">
                                     </div>
                                     <div class="col-xs-12 col-md-6">
-                                        <img src="https://openhouse.it.kmitl.ac.th/2016/assets/new/img/club-large/club-2-2.jpg" class="img-responsive">
+                                        <img src="{{URL('/assets/images/club/2-2.jpg')}}" class="img-responsive">
                                     </div>
                                 </div>
                             </div>
@@ -751,10 +701,10 @@
                                 <div class="imggroup">
                                     <div class="row rownominus">
                                         <div class="col-xs-12 col-md-6">
-                                            <img src="https://openhouse.it.kmitl.ac.th/2016/assets/new/img/club-large/club-3-1.jpg" class="img-responsive">
+                                            <img src="{{URL('/assets/images/club/3-1.jpg')}}" class="img-responsive">
                                         </div>
                                         <div class="col-xs-12 col-md-6">
-                                            <img src="https://openhouse.it.kmitl.ac.th/2016/assets/new/img/club-large/club-3-3.jpg" class="img-responsive">
+                                            <img src="{{URL('/assets/images/club/3-3.jpg')}}" class="img-responsive">
                                         </div>
                                     </div>
                                 </div>
@@ -771,7 +721,7 @@
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="imggroup">
-                                        <img src="https://openhouse.it.kmitl.ac.th/2016/assets/new/img/club-large/club-3-2.jpg" class="img-responsive">
+                                        <img src="{{URL('/assets/images/club/3-2.jpg')}}" class="img-responsive">
                                     </div>
                                 </div>
                             </div>
@@ -804,13 +754,13 @@
                                 <div class="imggroup nobottommargin">
                                     <div class="row rownominus">
                                         <div class="col-xs-12 col-md-4">
-                                            <img src="https://openhouse.it.kmitl.ac.th/2016/assets/new/img/club-large/club-4-2.jpg" class="club img-responsive">
+                                            <img src="{{URL('/assets/images/club/4-2.jpg')}}" class="club img-responsive">
                                         </div>
                                         <div class="hidden-xs hidden-sm col-md-4">
-                                            <img src="https://openhouse.it.kmitl.ac.th/2016/assets/new/img/club-large/club-4-3.jpg" class="club img-responsive">
+                                            <img src="{{URL('/assets/images/club/4-3.jpg')}}" class="club img-responsive">
                                         </div>
                                         <div class="col-xs-12 col-md-4">
-                                            <img src="https://openhouse.it.kmitl.ac.th/2016/assets/new/img/club-large/club-4-1.jpg" class="club img-responsive">
+                                            <img src="{{URL('/assets/images/club/4-1.jpg')}}" class="club img-responsive">
                                         </div>
                                     </div>
                                 </div>
@@ -851,10 +801,10 @@
                                 <div class="imggroup">
                                     <div class="row rownominus">
                                         <div class="col-xs-12 col-md-6">
-                                            <img src="https://openhouse.it.kmitl.ac.th/2016/assets/new/img/club-large/club-5-1.jpg" class="club img-responsive">
+                                            <img src="{{URL('/assets/images/club/5-1.jpg')}}" class="club img-responsive">
                                         </div>
                                         <div class="col-xs-12 col-md-6">
-                                            <img src="https://openhouse.it.kmitl.ac.th/2016/assets/new/img/club-large/club-5-2.jpg" class="club img-responsive">
+                                            <img src="{{URL('/assets/images/club/5-2.jpg')}}" class="club img-responsive">
                                         </div>
                                     </div>
                                 </div>
@@ -920,14 +870,14 @@
 
             <div class="gallery">
                 <div class="gallery-item owl-carousel owl-theme">
-                    <img class="owl-lazy" data-src="images/OPH2016/1.jpg" alt="">
-                    <img class="owl-lazy" data-src="images/OPH2016/2.jpg" alt="">
-                    <img class="owl-lazy" data-src="images/OPH2016/3.jpg" alt="">
-                    <img class="owl-lazy" data-src="images/OPH2016/4.jpg" alt="">
-                    <img class="owl-lazy" data-src="images/OPH2016/5.jpg" alt="">
-                    <img class="owl-lazy" data-src="images/OPH2016/6.jpg" alt="">
-                    <img class="owl-lazy" data-src="images/OPH2016/7.jpg" alt="">
-                    <img class="owl-lazy" data-src="images/OPH2016/1.jpg" alt="">
+                    <img class="owl-lazy" data-src="{{URL('/assets/images/OPH2016/1.jpg')}}" alt="">
+                    <img class="owl-lazy" data-src="{{URL('/assets/images/OPH2016/2.jpg')}}" alt="">
+                    <img class="owl-lazy" data-src="{{URL('/assets/images/OPH2016/3.jpg')}}" alt="">
+                    <img class="owl-lazy" data-src="{{URL('/assets/images/OPH2016/4.jpg')}}" alt="">
+                    <img class="owl-lazy" data-src="{{URL('/assets/images/OPH2016/5.jpg')}}" alt="">
+                    <img class="owl-lazy" data-src="{{URL('/assets/images/OPH2016/6.jpg')}}" alt="">
+                    <img class="owl-lazy" data-src="{{URL('/assets/images/OPH2016/7.jpg')}}" alt="">
+                    <img class="owl-lazy" data-src="{{URL('/assets/images/OPH2016/1.jpg')}}" alt="">
                 </div>
             </div>
         </div>
@@ -948,37 +898,4 @@
             }
         });
     </script>
-
-
-
-    <section id="section8">
-        <div class="wrapper">
-            <div class="sponsor">
-
-                <img src="images/sponsor/01_cdg.svg" alt="">
-                <img src="images/sponsor/02_vmware.svg" alt="">
-                <img src="images/sponsor/03_AIT.svg" alt="">
-                <img src="images/sponsor/04_lactasoy.svg" alt="">
-                <img src="images/sponsor/05_camphub.svg" alt="">
-                <img src="images/sponsor/06_bks.svg" alt="">
-
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="wrapper">
-            <div class="footer-left">©2016 Faculty of Information Technology, KMITL</div>
-            <div class="footer-right">
-
-                <p><a href="">2012</a> |
-                    <a href="">2013</a> |
-                    <a href="">2014</a> |
-                    <a href="">2016</a> |
-                    <a href="">2017 | Developer</a></p>
-            </div>
-        </div>
-    </footer>
-</body>
-
-</html>
+@endsection

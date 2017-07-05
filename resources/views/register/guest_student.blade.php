@@ -1,64 +1,12 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IT KMITL OPH 2017</title>
-    <!-- JS -->
-    <script src="../assets/js/jquery-3.2.1.min.js"></script>
-    <script src="../assets/js/script.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
-    <script src="../assets/js/owl.carousel.min.js"></script>
-
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../assets/css/animate.css">
-</head>
-
-<body class="register">
-    <!-- Static navbar -->
-    <nav id="menu" class="navbar-default org-color-bg">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" id="nav-btn" class="hamberger navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-                        </button>
-                <a class="navbar-brand" href="#section1">
-                            <img width="100" src="../assets/images/logo-sym.svg" alt="">
-                    </a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#section1">หน้าหลัก</a></li>
-                    <li><a href="../navbar-fixed-top/">กำหนดการ</a></li>
-                    <li><a href="#section4">การแข่งขัน</a></li>
-                    <li><a href="../navbar-fixed-top/">การเดินทาง</a></li>
-                    <li><a href="../navbar-fixed-top/">ติดต่อ</a></li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-        <!--/.container-fluid -->
-    </nav>
-
-        <div class="paper">
-            <div class="container">
-                <h1 class="h-light text-center">ลงทะเบียนเข้าชมงานสำหรับบุคคลทั่วไป</h1>
-                <hr>
-                <form action="https://openhouse.it.kmitl.ac.th/2016/register/guest" method="post">
-                <input type="hidden" name="_token" value="FF7iBXsi0m0Ttde1TrFMOMUcStkQ7HR6x6tswygz">
-                                <h3>ข้อมูลส่วนตัว</h3>
+@extends('register.partial')
+@section('content')
+    <div class="paper">
+        <div class="container">
+            <h1 class="h-light text-center">ลงทะเบียนเข้าชมงานสำหรับนักเรียน นักศึกษา</h1>
+            <hr>
+            <form action="https://openhouse.it.kmitl.ac.th/2016/register/guest_student" method="post">
+                {!! csrf_field() !!}
+                <h3>ข้อมูลส่วนตัว</h3>
                 <div class="row">
                     <div class="col-md-6 col-xs-12">
                         <div class="row">
@@ -75,7 +23,7 @@
                             <div class="col-xs-7">
                                 <div class="form-group">
                                     <label>ชื่อ</label>
-                                    <input type="text" class="form-control" placeholder="ไอที" name="name" value="" required="">
+                                    <input type="text" class="form-control" placeholder="ไอที" name="name" required="" value="">
                                 </div>
                             </div>
                         </div>
@@ -83,7 +31,7 @@
                     <div class="col-md-6 col-xs-12">
                         <div class="form-group">
                             <label>นามสกุล</label>
-                            <input type="text" class="form-control" placeholder="ลาดกระบัง" name="surname" value="" required="">
+                            <input type="text" class="form-control" placeholder="ลาดกระบัง" name="surname" required="" value="">
                         </div>
                     </div>
                 </div>
@@ -110,21 +58,43 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 col-xs-6">
+                    <div class="col-md-4 col-xs-12">
                         <div class="form-group">
-                            <label>อาชีพ</label>
-                            <input type="text" class="form-control" placeholder="e.g. เจ้าของStartupชั้นนำของเมืองไทย" name="career" required="" value="">
+                            <label>ระดับการศึกษา</label>
+                            <select class="form-control" name="major" required="">
+                                <option value="ประถมศึกษา">ประถมศึกษา</option>
+                                <option value="มัธยมศึกษาตอนต้น">มัธยมศึกษาตอนต้น</option>
+                                <option value="มัธยมศึกษาตอนปลาย" selected="selected">มัธยมศึกษาตอนปลาย</option>
+                                <option value="อาชีวศึกษา">อาชีวศึกษา</option>
+                                <option value="ปริญญาตรี">ปริญญาตรี</option>
+                                <option value="ปริญญาโท">ปริญญาโท</option>
+                                <option value="ปริญญาเอก">ปริญญาเอก</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xs-6">
+                    <div class="col-md-4 col-xs-6">
+                        <div class="form-group">
+                            <label>แผนการเรียน</label>
+                            <input type="text" class="form-control" placeholder="e.g. วิทย์-คณิต, ศิลป์-คำนวณ " name="branch" required="" value="">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                        <div class="form-group">
+                            <label>ชั้นปี</label>
+                            <input type="text" class="form-control" placeholder="e.g. ม.6" name="degree" required="" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
                         <div class="form-group">
                             <label>จังหวัด</label>
                             <input type="text" class="form-control" placeholder="e.g. กรุงเทพฯ" name="province" required="" value="">
                         </div>
                     </div>
                 </div>
-                
-                                <h3>ช่องทางการติดต่อ</h3>
+
+                <h3>ช่องทางการติดต่อ</h3>
                 <div class="row">
                     <div class="col-md-6 col-xs-12">
                         <div class="form-group">
@@ -153,8 +123,8 @@
                         </div>
                     </div>
                 </div>
-                
-                                <h3>ข่าวสารจาก IT Ladkrabang Open House</h3>
+
+                <h3>ข่าวสารจาก IT Ladkrabang Open House</h3>
                 <div class="row">
                     <div class="col-md-12 col-xs-12">
                         <div class="form-group">
@@ -166,43 +136,10 @@
                         </div>
                     </div>
                 </div>
-                                <div class="text-center">
+                <div class="text-center">
                     <button type="submit" class="btn btn-primary btn-lg">ลงทะเบียน</button>
                 </div>
             </form>
-            </div>
         </div>
-
-
-
-    <section id="section8">
-        <div class="wrapper">
-            <div class="sponsor">
-
-                <img src="../assets/images/sponsor/01_cdg.svg" alt="">
-                <img src="../assets/images/sponsor/02_vmware.svg" alt="">
-                <img src="../assets/images/sponsor/03_AIT.svg" alt="">
-                <img src="../assets/images/sponsor/04_lactasoy.svg" alt="">
-                <img src="../assets/images/sponsor/05_camphub.svg" alt="">
-                <img src="../assets/images/sponsor/06_bks.svg" alt="">
-
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="wrapper">
-            <div class="footer-left">©2016 Faculty of Information Technology, KMITL</div>
-            <div class="footer-right">
-
-                <p><a href="">2012</a> |
-                    <a href="">2013</a> |
-                    <a href="">2014</a> |
-                    <a href="">2016</a> |
-                    <a href="">2017 | Developer</a></p>
-            </div>
-        </div>
-    </footer>
-</body>
-
-</html>
+    </div>
+@endsection
