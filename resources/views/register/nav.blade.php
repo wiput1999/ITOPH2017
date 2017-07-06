@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#section1">
+            <a class="navbar-brand" href="{{URL('/')}}">
                 <img width="100" src="{{URL('/assets/images/logo-sym.svg')}}" alt="">
             </a>
         </div>

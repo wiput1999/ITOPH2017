@@ -31,6 +31,8 @@ Route::get('/contact', function () {
 // Register Guest
 Route::get('/register/guest', 'RegisterController@createGuestRegister');
 
+Route::post('/register/guest', 'RegisterController@storeGuestRegister');
+
 Route::get('/register/guest_school', 'RegisterController@createGuestSchoolRegister');
 
 Route::get('/register/guest_student', 'RegisterController@createGuestStudentRegister');

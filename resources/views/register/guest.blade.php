@@ -4,7 +4,7 @@
         <div class="container">
             <h1 class="h-light text-center">ลงทะเบียนเข้าชมงานสำหรับบุคคลทั่วไป</h1>
             <hr>
-            <form action="https://openhouse.it.kmitl.ac.th/2016/register/guest" method="post">
+            <form action="{{URL('/register/guest')}}" method="post">
                 {!! csrf_field() !!}
                 <h3>ข้อมูลส่วนตัว</h3>
                 <div class="row">
