@@ -21,11 +21,11 @@ Route::get('/schedule', function () {
 });
 
 Route::get('/route', function () {
-   return view('route', ["การเดินทาง | "]);
+   return view('route', ["title" => "การเดินทาง | "]);
 });
 
 Route::get('/contact', function () {
-    return view('contact', ["ติดต่อเรา | "]);
+    return view('contact', ["title" => "ติดต่อเรา | "]);
 });
 
 // Register Guest
@@ -35,7 +35,11 @@ Route::post('/register/guest', 'RegisterController@storeGuestRegister');
 
 Route::get('/register/guest_school', 'RegisterController@createGuestSchoolRegister');
 
+Route::post('/register/guest_school', 'RegisterController@storeGuestSchoolRegister');
+
 Route::get('/register/guest_student', 'RegisterController@createGuestStudentRegister');
+
+Route::post('/register/guest_student', 'RegisterController@storeGuestStudentRegister');
 
 // Register Competition
 
@@ -53,3 +57,5 @@ Route::get('/competition/quiz', 'Competition\QuizController@showRule');
 
 // Project IT
 Route::get('/competition/project', 'Competition\ProjectITController@showRule');
+
+// Backend

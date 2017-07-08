@@ -27,9 +27,11 @@ class CreateGuestTable extends Migration
             $table->text('facebook')->nullable();
             $table->text('twitter')->nullable();
             $table->tinyInteger('news')->default(0);
+            $table->text('workshop');
             $table->timestamp('confirm')->nullable();
             $table->timestamps();
         });
+        DB::statement('ALTER TABLE guest CHANGE id id INT(4) UNSIGNED ZEROFILL AUTO_INCREMENT');
     }
 
     /**

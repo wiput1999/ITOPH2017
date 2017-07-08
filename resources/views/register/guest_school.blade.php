@@ -4,7 +4,7 @@
         <div class="container">
             <h1 class="h-light text-center">ลงทะเบียนเข้าชมงานสำหรับโรงเรียน</h1>
             <hr>
-            <form action="https://openhouse.it.kmitl.ac.th/2016/register/guest_school" method="post">
+            <form action="{{URL('/register/guest_school')}}" method="post">
                 {!! csrf_field() !!}
                 <h3>ข้อมูลส่วนตัว</h3>
                 <div class="row">
@@ -122,6 +122,24 @@
                         </div>
                     </div>
                 </div>
+
+                {{--เวิร์กช้อปควย--}}
+                <h3>คุณต้องการเข้าร่วม Workshop ประเภทใด</h3>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <div class="form-group">
+                            <select name="workshop" class="form-control" required>
+                                <option selected disabled>กรุณาเลือก</option>
+                                <option value="none">ไม่ประสงค์จะเข้าร่วม</option>
+                                <option value="multi">ขยับขับเคลื่อนด้วย AR</option>
+                                <option value="network">เชื่อมต่อทุกสรรพสิ่งด้วย IoT</option>
+                                <option value="softeng">ใส่กึ่นใส่เลโก้</option>
+                                <option value="datasci">ตามหาโปเกม่อนด้วยวิทยาการข้อมูล</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                {{--end เวิร์กช้อป--}}
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary btn-lg">ลงทะเบียน</button>
                 </div>

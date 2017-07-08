@@ -11,7 +11,7 @@ class Guest extends Model
     protected $appends = ['code', 'type'];
 
     protected $fillable = ['prefix', 'name', 'surname', 'gender', 'age',
-        'career', 'province', 'phone', 'email', 'facebook', 'twitter', 'news'];
+        'career', 'province', 'phone', 'email', 'facebook', 'twitter', 'news', 'workshop'];
 
     public function getTypeAttribute() {
         return 1;

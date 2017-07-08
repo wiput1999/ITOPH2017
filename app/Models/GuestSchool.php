@@ -11,7 +11,7 @@ class GuestSchool extends Model
     protected $table = 'guest_school';
 
     protected $fillable = ['prefix', 'name', 'surname', 'gender', 'age', 'school',
-        'follower', 'province', 'phone', 'email', 'facebook', 'twitter', 'news'];
+        'follower', 'province', 'phone', 'email', 'facebook', 'twitter', 'news', 'workshop'];
 
     public function getTypeAttribute() {
         return 3;

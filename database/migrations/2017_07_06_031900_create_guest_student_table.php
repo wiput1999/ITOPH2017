@@ -29,9 +29,11 @@ class CreateGuestStudentTable extends Migration
             $table->text('facebook')->nullable();
             $table->text('twitter')->nullable();
             $table->tinyInteger('news')->default(0);
+            $table->text('workshop');
             $table->timestamp('confirm')->nullable();
             $table->timestamps();
         });
+        DB::update('ALTER TABLE guest_student AUTO_INCREMENT = 2001');
     }
 
     /**

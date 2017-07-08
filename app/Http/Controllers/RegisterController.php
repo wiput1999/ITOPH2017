@@ -33,6 +33,7 @@ class RegisterController extends Controller
             'province'				=> 'required',
             'email'					=> 'required|email',
             'phone'					=> 'required|regex:/^0[0-9]{1,2}[0-9]{7}$/',
+            'workshop'				=> 'required|in:none,multi,network,softeng,datasci',
         ];
 
         $messages = [
@@ -51,7 +52,8 @@ class RegisterController extends Controller
             'email.required'		=> 'กรุณากรอก อีเมลล์',
             'email.email'			=> 'รูปแบบอีเมลไม่ถูกต้อง',
             'phone.required'		=> 'กรุณากรอกเบอร์โทรศัพท์',
-            'phone.regex'			=> 'รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง'
+            'phone.regex'			=> 'รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง',
+            'workshop.required'     => 'กรุณาเลือก Workshop'
         ];
 
         $validator = Validator::make($inputs, $rules, $messages);
@@ -64,6 +66,9 @@ class RegisterController extends Controller
         $guest->facebook = empty($request->facebook)? null:$request->facebook;
         $guest->twitter = empty($request->twitter)? null:$request->twitter;
         $guest->save();
+
+        $email = new Guest();
+        $email->fill($request->all());
 
         return view('register.guest', ['success' => 1, "title" => "ลงทะเบียนเข้าชมงาน | ", 'data' => $request->all()]);
     }
@@ -86,6 +91,7 @@ class RegisterController extends Controller
             'province'				=> 'required',
             'email'					=> 'required|email',
             'phone'					=> 'required|regex:/^0[0-9]{1,2}[0-9]{7}$/',
+            'workshop'				=> 'required|in:none,multi,network,softeng,datasci',
         ];
 
         $messages = [
@@ -107,6 +113,7 @@ class RegisterController extends Controller
             'email.email'			=> 'รูปแบบอีเมลไม่ถูกต้อง',
             'phone.required'		=> 'กรุณา กรอกเบอร์โทรศัพท์',
             'phone.regex'			=> 'รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง',
+            'workshop.required'     => 'กรุณาเลือก Workshop'
         ];
 
         $validator = Validator::make($inputs, $rules, $messages);
@@ -142,6 +149,7 @@ class RegisterController extends Controller
             'province'				=> 'required',
             'email'					=> 'required|email',
             'phone'					=> 'required|regex:/^0[0-9]{1,2}[0-9]{7}$/',
+            'workshop'				=> 'required|in:none,multi,network,softeng,datasci',
         ];
 
         $messages = [
@@ -164,6 +172,7 @@ class RegisterController extends Controller
             'email.email'			=> 'รูปแบบอีเมลไม่ถูกต้อง',
             'phone.required'		=> 'กรุณากรอก เบอร์โทรศัพท์',
             'phone.regex'			=> 'รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง',
+            'workshop.required'     => 'กรุณาเลือก Workshop'
         ];
 
         $validator = Validator::make($inputs, $rules, $messages);
