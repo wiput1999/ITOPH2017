@@ -36,7 +36,7 @@
             </div>
             <br/>
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.google.com/maps/d/embed?mid=1V2TjMw-MDgO-MSnPbqMIXQM8Lng"></iframe>
+                <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1360.8379804952315!2d100.7814984242799!3d13.730398001992052!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcb43a76f038c38ca!2z4LiE4LiT4Liw4LmA4LiX4LiE4LmC4LiZ4LmC4Lil4Lii4Li14Liq4Liy4Lij4Liq4LiZ4LmA4LiX4Lio!5e0!3m2!1sth!2s!4v1499750481853"></iframe>
             </div>
         </div>
     </div>
