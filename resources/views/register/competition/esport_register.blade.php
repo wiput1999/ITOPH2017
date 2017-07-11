@@ -314,7 +314,7 @@
                                 <div class="col-xs-7">
                                     <div class="form-group">
                                         <label>ชื่อ</label>
-                                        <input type="text" class="form-control" placeholder="ไอที" name="subName[]" value="{{ old('subName')[0] }}">
+                                        <input type="text" class="form-control" placeholder="ไอที" name="subName[]" value="{{ old('subName')[0] }}" required>
                                     </div>
                                 </div>
                             </div>
@@ -322,7 +322,7 @@
                         <div class="col-md-6 col-xs-12">
                             <div class="form-group">
                                 <label>นามสกุล</label>
-                                <input type="text" class="form-control" placeholder="ลาดกระบัง" name="subSurname[]" value="{{ old('subSurname')[0] }}">
+                                <input type="text" class="form-control" placeholder="ลาดกระบัง" name="subSurname[]" value="{{ old('subSurname')[0] }}" required>
                             </div>
                         </div>
                     </div>
@@ -330,13 +330,13 @@
                         <div class="col-md-6 col-xs-12">
                             <div class="form-group">
                                 <label>Steam</label>
-                                <input type="text" class="form-control" placeholder="e.g. https://steamcommunity.com/id/itkmitl" name="subSteam[]" value="{{ old('subSteam')[0] }}">
+                                <input type="text" class="form-control" placeholder="e.g. https://steamcommunity.com/id/itkmitl" name="subSteam[]" value="{{ old('subSteam')[0] }}" required>
                             </div>
                         </div>
                         <div class="col-md-6 col-xs-12">
                             <div class="form-group">
                                 <label>facebook</label>
-                                <input type="text" class="form-control" placeholder="e.g. fb.com/ITLadkrabangOpenhouse" name="subFacebook[]" value="{{ old('subFacebook')[0] }}">
+                                <input type="text" class="form-control" placeholder="e.g. fb.com/ITLadkrabangOpenhouse" name="subFacebook[]" value="{{ old('subFacebook')[0] }}" required>
                             </div>
                         </div>
                     </div>
@@ -344,7 +344,7 @@
                         <div class="col-md-6 col-xs-12">
                             <div class="form-group">
                                 <label for="phone">เบอร์โทรศัพท์</label>
-                                <input type="text" class="form-control" placeholder="e.g. 080808xxxx" name="subPhone[]" value="{{old('subPhone')[0]}}">
+                                <input type="text" class="form-control" placeholder="e.g. 080808xxxx" name="subPhone[]" value="{{old('subPhone')[0]}}" required>
                             </div>
                         </div>
                     </div>
