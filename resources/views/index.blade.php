@@ -273,7 +273,7 @@
                             </h1>
                             <p>แข่งขันเกม DOTA2 ในโหมด CAPTAIN เวอร์ชันที่ใช้แข่งคือ Tournament, การแข่งขันเป็นแบบแพ้ตกรอบ รายละเอียด
                             </p>
-                            <a href="/competition/esport">
+                            <a href="{{URL('/competition/esport')}}">
                                 <button class="card-battle-btn">สมัครแข่งขัน</button>
                             </a>
                         </div>
@@ -284,18 +284,14 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 ">
                     <div id="project-it" class="battle-hover card-battle-item">
                         <div class="img-item-battle">
-<<<<<<< HEAD:resources/views/index.blade.php
-                            <img src="{{URL('/assets/images/icon/dota2.svg')}}" alt="">
-=======
-                            <img src="images/icon/project-it.svg" alt="">
->>>>>>> master:public/index.html
+                            <img src="{{URL('/assets/images/icon/project-it.svg')}}" alt="">
                         </div>
                         <div class="text-item-battle">
                             <h1>การแข่งขันโครงงาน </h1>
                             <p>สร้างสรรค์โครงงานที่มีการนำเทคโนโลยีสารสนเทศเข้ามาใช้ ที่มีความน่าสนใจทั้งในเชิงการตลาดและเทคโนโลยี..
 
                             </p>
-                            <a href="/competition/project">
+                            <a href="{{URL('/competition/project')}}">
                                 <button class="card-battle-btn">สมัครแข่งขัน</button>
                             </a>
                         </div>
@@ -305,18 +301,14 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 ">
                     <div id="network-it" class="battle-hover card-battle-item">
                         <div class="img-item-battle">
-<<<<<<< HEAD:resources/views/index.blade.php
-                            <img src="{{URL('/assets/images/icon/dota2.svg')}}" alt="">
-=======
-                            <img src="images/icon/network.svg" alt="">
->>>>>>> master:public/index.html
+                            <img src="{{URL('/assets/images/icon/network.svg')}}" alt="">
                         </div>
                         <div class="text-item-battle">
                             <h1>ความปลอดภัยระบบ</h1>
                             <p>รูปแบบการแข่งขันจะเป็นการหาช่องโหว่ของระบบเพื่อแก้ปัญหาภายในเวลาที่กำหนดให้...
 
                             </p>
-                            <a href="/competition/network">
+                            <a href="{{URL('/competition/network')}}">
                                 <button class="card-battle-btn">สมัครแข่งขัน</button>
                             </a>
                         </div>
@@ -327,17 +319,13 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 ">
                     <div id="website-it" class="battle-hover card-battle-item">
                         <div class="img-item-battle">
-<<<<<<< HEAD:resources/views/index.blade.php
-                            <img src="{{URL('/assets/images/icon/dota2.svg')}}" alt="">
-=======
-                            <img src="images/icon/website.svg" alt="">
->>>>>>> master:public/index.html
+                            <img src="{{URL('/assets/images/icon/website.svg')}}" alt="">
                         </div>
                         <div class="text-item-battle">
                             <h1>การแข่งขันพัฒนาเว็บไซต์</h1>
                             <p>ให้ผู้แข่งขันพัฒนาเว็บไซต์ด้วยภาษา PHP ให้มีรายละเอียดตามที่โจทย์กำหนด...
                             </p>
-                            <a href="/competition/php">
+                            <a href="{{URL('/competition/php')}}">
                                 <button class="card-battle-btn">สมัครแข่งขัน</button>
                             </a>
                         </div>
@@ -348,17 +336,13 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 ">
                     <div id="quiz-it" class="battle-hover card-battle-item">
                         <div class="img-item-battle">
-<<<<<<< HEAD:resources/views/index.blade.php
-                            <img src="{{URL('/assets/images/icon/dota2.svg')}}" alt="">
-=======
-                            <img src="images/icon/quiz.svg" alt="">
->>>>>>> master:public/index.html
+                            <img src="{{URL('/assets/images/icon/quiz.svg')}}" alt="">
                         </div>
                         <div class="text-item-battle">
                             <h1>แก้ปัญหาเชิงวิเคราะห์</h1>
                             <p>ผู้เข้าแข่งขันต้องเขียนผลลัพธ์และแนวคิดในการแก้ปัญหาลงในกระดาษคำตอบ และส่งกระดาษคำตอบภายในเวลาที่กำหนด...
                             </p>
-                            <a href="/competition/quiz">
+                            <a href="{{URL('/competition/quiz')}}">
                                 <button class="card-battle-btn">สมัครแข่งขัน</button>
                             </a>
                         </div>
