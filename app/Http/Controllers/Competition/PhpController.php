@@ -85,10 +85,10 @@ class PhpController extends Controller
 
         $competition = "php";
 
-        \Mail::to($account['email'])->queue(new MailCompetition($inputs["teacher_name"], $php, $competition));
+        \Mail::to($account['email'])->send(new MailCompetition($inputs["teacher_name"], $php, $competition));
 
         for ($i = 0; $i < 2; $i++) {
-            \Mail::to($inputs['email'][$i])->queue(new MailCompetition($inputs['name'][$i], $php, $competition));
+            \Mail::to($inputs['email'][$i])->send(new MailCompetition($inputs['name'][$i], $php, $competition));
         }
 
         return view('register.competition.php_register', ['success' => 1, "title" => "การแข่งขันพัฒนาเว็บไซต์ด้วย PHP และ JavaScript | "]);

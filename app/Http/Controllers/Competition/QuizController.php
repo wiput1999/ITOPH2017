@@ -86,10 +86,10 @@ class QuizController extends Controller
 
         $competition = "quiz";
 
-        \Mail::to($account['email'])->queue(new MailCompetition($inputs["teacher_name"], $quiz, $competition));
+        \Mail::to($account['email'])->send(new MailCompetition($inputs["teacher_name"], $quiz, $competition));
 
         for ($i = 0; $i < 2; $i++) {
-            \Mail::to($inputs['email'][$i])->queue(new MailCompetition($inputs['name'][$i], $quiz, $competition));
+            \Mail::to($inputs['email'][$i])->send(new MailCompetition($inputs['name'][$i], $quiz, $competition));
         }
 
         return view('register.competition.quiz_register', ['success' => 1, "title" => "การแข่งขันตอบคำถามด้านเทคโนโลยีสารสนเทศ | "]);

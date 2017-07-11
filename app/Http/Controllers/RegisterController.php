@@ -70,7 +70,7 @@ class RegisterController extends Controller
 
         $type = "guest";
 
-        \Mail::to($inputs['email'])->queue(new MailGuest($guest["name"], $guest, $type));
+        \Mail::to($inputs['email'])->send(new MailGuest($guest["name"], $guest, $type));
 
         return view('register.guest', ['success' => 1, "title" => "ลงทะเบียนเข้าชมงาน | ", 'data' => $request->all()]);
     }
@@ -131,7 +131,7 @@ class RegisterController extends Controller
 
         $type = "student";
 
-        \Mail::to($inputs['email'])->queue(new MailGuest($guestStudent["name"], $guestStudent, $type));
+        \Mail::to($inputs['email'])->send(new MailGuest($guestStudent["name"], $guestStudent, $type));
 
         return view('register.guest_student', ['success' => 1, "title" => "ลงทะเบียนเข้าชมงาน | ", 'data' => $request->all()]);
     }
@@ -194,7 +194,7 @@ class RegisterController extends Controller
 
         $type = "school";
 
-        \Mail::to($inputs['email'])->queue(new MailGuest($guestSchool["name"], $guestSchool, $type));
+        \Mail::to($inputs['email'])->send(new MailGuest($guestSchool["name"], $guestSchool, $type));
 
         return view('register.guest_school', ['success' => 1, "title" => "ลงทะเบียนเข้าชมงาน | ", 'data' => $request->all()]);
 

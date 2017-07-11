@@ -98,7 +98,7 @@ class ProjectITController extends Controller
         $account['email'] = $request->input('teacher_email');
         $accounts[] = $account;
 
-        \Mail::to($account['email'])->queue(new MailCompetition($inputs["teacher_name"], $project, $competition));
+        \Mail::to($account['email'])->send(new MailCompetition($inputs["teacher_name"], $project, $competition));
 
         return view('register.competition.projectit_register', ['success' => 1, "title" => "การประกวดโครงงานเทคโนโลยีสารสนเทศระดับมัธยมศึกษาตอนปลาย | "]);
     }

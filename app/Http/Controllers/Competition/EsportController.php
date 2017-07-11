@@ -111,7 +111,7 @@ class EsportController extends Controller
 
         $competition = "esport";
 
-        \Mail::to($inputs['teacher_email'])->queue(new MailCompetition($inputs["teacher_name"] ,$esport, $competition));
+        \Mail::to($inputs['teacher_email'])->send(new MailCompetition($inputs["teacher_name"] ,$esport, $competition));
 
         return view('register.competition.esport_register', ['success' => 1, "title" => "การแข่งขันกีฬาอิเล็กทรอนิกส์ | "]);
     }
