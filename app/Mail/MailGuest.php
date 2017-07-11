@@ -36,15 +36,15 @@ class MailGuest extends Mailable
     {
         if ($this->type == "guest") {
             return $this->markdown('emails.guest')
-                ->from("openhouse@it.kmitl.ac.th", "IT Ladkrabang Openhouse")
+                ->from("postmaster@sandbox743371d889b143c098b1a6d077c16fb2.mailgun.org", "IT Ladkrabang Openhouse")
                 ->subject("ยืนยันการลงทะเบียนเข้าร่วมงาน | IT Ladkrabang Openhouse 2017");
         } else if ($this->type == "student") {
             return $this->markdown('emails.student')
-                ->from("openhouse@it.kmitl.ac.th", "IT Ladkrabang Openhouse")
+                ->from("postmaster@sandbox743371d889b143c098b1a6d077c16fb2.mailgun.org", "IT Ladkrabang Openhouse")
                 ->subject("ยืนยันการลงทะเบียนเข้าร่วมงาน | IT Ladkrabang Openhouse 2017");
         } else if ($this->type == "school") {
             return $this->markdown('emails.school')
-                ->from("openhouse@it.kmitl.ac.th", "IT Ladkrabang Openhouse")
+                ->from("postmaster@sandbox743371d889b143c098b1a6d077c16fb2.mailgun.org", "IT Ladkrabang Openhouse")
                 ->subject("ยืนยันการลงทะเบียนเข้าร่วมงาน | IT Ladkrabang Openhouse 2017");
         }
     }

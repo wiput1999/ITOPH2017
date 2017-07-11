@@ -11,7 +11,6 @@
 | ------------- | ------------- |
 | ชื่อ - นามสกุล   | {{$data->prefix}} {{$data->name}} {{$data->surname}} |
 | อายุ          | {{$data->age}} |
-| อาชีพ          | {{$data->career}} |
 | จังหวัด         | {{$data->province}} |
 | E-mail Address| {{$data->email}} |
 @endcomponent

@@ -10,9 +10,10 @@
 | คอลัมน์         | ข้อมูล          |
 | ------------- | ------------- |
 | ชื่อ - นามสกุล   | {{$data->prefix}} {{$data->name}} {{$data->surname}} |
-| อายุ          | {{$data->age}} |
-| อาชีพ          | {{$data->career}} |
+| อายุ           | {{$data->age}} |
 | จังหวัด         | {{$data->province}} |
 | E-mail Address| {{$data->email}} |
+| โรงเรียน       | {{$data->school}} |
+| จำนวนนักเรียน   | {{$data->follower}} |
 @endcomponent
 @endcomponent

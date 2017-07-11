@@ -31,7 +31,7 @@ class CreateGuestTable extends Migration
             $table->timestamp('confirm')->nullable();
             $table->timestamps();
         });
-        DB::statement('ALTER TABLE guest CHANGE id id INT(4) UNSIGNED ZEROFILL AUTO_INCREMENT');
+        DB::update('ALTER TABLE guest AUTO_INCREMENT = 1001');
     }
 
     /**

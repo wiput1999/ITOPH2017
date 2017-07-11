@@ -32,7 +32,7 @@ class CreateGuestSchoolTable extends Migration
             $table->timestamp('confirm')->nullable();
             $table->timestamps();
         });
-        DB::update('ALTER TABLE guest_school AUTO_INCREMENT = 4001');
+        DB::update('ALTER TABLE guest_school AUTO_INCREMENT = 5001');
     }
 
     /**
