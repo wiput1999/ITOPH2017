@@ -82,11 +82,11 @@ class ProjectITController extends Controller
 
         $bizcanvas = $request->file('bizcanvas');
         $filename = $inputs["team_name"] . "_bizcanvas_" . str_random(10);
-        Storage::disk('local')->put($filename.'.pdf',  File::get($bizcanvas));
+        Storage::disk('public')->put($filename.'.pdf',  File::get($bizcanvas));
         $project->bizcanvas = $filename;
         $storyboard = $request->file('storyboard');
         $filename = $inputs["team_name"] . "_storyboard_" . str_random(10);
-        Storage::disk('local')->put($filename.'.pdf', File::get($storyboard));
+        Storage::disk('public')->put($filename.'.pdf', File::get($storyboard));
         $project->storyboard = $filename;
 
         $remember = md5(time() . str_random(100));
