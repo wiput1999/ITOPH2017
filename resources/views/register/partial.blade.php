@@ -9,9 +9,9 @@
     <meta property="og:image" content="{{URL('/og.png')}}">
     <link rel="shortcut icon" href="{{URL('/favicon.ico')}}" type="image/x-icon"/>
 
-    @include('layout.js')
+    @include('register.js')
 
-    @include('layout.css')
+    @include('register.css')
 </head>
 
 <body>
