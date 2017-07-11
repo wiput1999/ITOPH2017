@@ -74,7 +74,9 @@
 
             <hr>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary btn-lg">ลงทะเบียน</button>
+                <a href="{{URL('/competition/network/register')}}">
+                    <button type="submit" class="btn btn-primary btn-lg">ลงทะเบียน</button>
+                </a>
             </div>
         </div>
     </div>
