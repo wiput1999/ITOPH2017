@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\MailGuest;
 use App\Models\Guest, App\Models\GuestSchool, App\Models\GuestStudent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -67,8 +68,9 @@ class RegisterController extends Controller
         $guest->twitter = empty($request->twitter)? null:$request->twitter;
         $guest->save();
 
-        $email = new Guest();
-        $email->fill($request->all());
+        $type = "guest";
+
+        \Mail::to($inputs['email'])->queue(new MailGuest($inputs["name"], $guest, $type));
 
         return view('register.guest', ['success' => 1, "title" => "ลงทะเบียนเข้าชมงาน | ", 'data' => $request->all()]);
     }
@@ -126,6 +128,10 @@ class RegisterController extends Controller
         $guestStudent->facebook = empty($request->facebook)? null:$request->facebook;
         $guestStudent->twitter = empty($request->twitter)? null:$request->twitter;
         $guestStudent->save();
+
+        $type = "student";
+
+        \Mail::to($inputs['email'])->queue(new MailGuest($inputs["name"], $guestStudent, $type));
 
         return view('register.guest_student', ['success' => 1, "title" => "ลงทะเบียนเข้าชมงาน | ", 'data' => $request->all()]);
     }
@@ -186,6 +192,9 @@ class RegisterController extends Controller
         $guestSchool->twitter = empty($request->twitter)? null:$request->twitter;
         $guestSchool->save();
 
+        $type = "school";
+
+        \Mail::to($inputs['email'])->queue(new MailGuest($inputs["name"], $guestSchool, $type));
 
         return view('register.guest_school', ['success' => 1, "title" => "ลงทะเบียนเข้าชมงาน | ", 'data' => $request->all()]);
 

@@ -1,6 +1,7 @@
 @extends('register.partial')
 @section('content')
     <div class="paper">
+        @include('register.alert')
         <div class="container">
             <h1 class="h-light text-center">ลงทะเบียนเข้าชมงานสำหรับโรงเรียน</h1>
             <hr>

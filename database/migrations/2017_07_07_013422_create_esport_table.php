@@ -27,7 +27,7 @@ class CreateEsportTable extends Migration
             $table->text('teacher_phone');
             $table->text('teacher_email');
             $table->text('remember');
-            $table->tinyInteger('confirm');
+            $table->tinyInteger('confirm')->default(0);
             $table->timestamps();
         });
     }

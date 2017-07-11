@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePitchingTable extends Migration
+class CreateProjectTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePitchingTable extends Migration
      */
     public function up()
     {
-        Schema::create('pitching', function (Blueprint $table) {
+        Schema::create('project', function (Blueprint $table) {
             $table->increments('id');
             $table->text('team_name');
             $table->text('member'); // Collect in JSON
@@ -28,7 +28,7 @@ class CreatePitchingTable extends Migration
             $table->text('bizcanvas');
             $table->text('storyboard');
             $table->text('remember');
-            $table->tinyInteger('confirm');
+            $table->tinyInteger('confirm')->default(0);
             $table->timestamps();
         });
     }
@@ -40,6 +40,6 @@ class CreatePitchingTable extends Migration
      */
     public function down()
     {
-        Schema::drop('pitching');
+        Schema::drop('project');
     }
 }
