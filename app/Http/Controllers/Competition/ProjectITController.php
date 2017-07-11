@@ -36,8 +36,8 @@ class ProjectITController extends Controller
             'teacher_email'         => 'required|email',
             'idea'			        => 'required',
             'idea_desc'			    => 'required',
-            'bizcanvas'			    => 'required|max:10000000|mimes:pdf',
-            'storyboard'			=> 'required|max:10000000|mimes:pdf'
+            'bizcanvas'			    => 'required|max:11240000|mimes:pdf',
+            'storyboard'			=> 'required|max:11240000|mimes:pdf'
         ];
 
         $messages = [
