@@ -10,8 +10,6 @@
 | เบอร์โทรศัพท์อาจารย์ควบคุมทีม | {{$data["teacher_phone"]}} |
 | E-mail อาจารย์ควบคุมทีม | {{$data["teacher_email"]}} |
 | โรงเรียน       | {{$data["school"]}} |
-| จังหวัดโรงเรียน  | {{$data["school_province"]}} |
-| ที่อยู่โรงเรียน    | {{$data["school_addr"]}} |
     @php
         $count = 1
     @endphp
