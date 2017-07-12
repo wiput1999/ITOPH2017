@@ -18,7 +18,6 @@
     @endphp
     @foreach($data->member as $member)
         | ชื่อสมาชิก คนที่ {{$count}} | {{$member["prefix"]}} {{$member["name"]}} {{$member["surname"]}} |
-        | เบอร์โทรศัพท์ คนที่ {{$count}} | {{$member["phone"]}} |
         | E-mail คนที่ {{$count}} | {{$member["email"]}} |
         @php
             $count++
