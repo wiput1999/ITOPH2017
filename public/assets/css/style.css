@@ -41,8 +41,8 @@ h5 {
 }
 
 p{
-     text-indent: 1.5em;
-     font-family: cschat;
+    text-indent: 1.5em;
+    font-family: cschat;
 }
 
 .modal-body p{
@@ -80,6 +80,11 @@ p{
 .wrapper {
     margin: 0 auto;
     width: 90%;
+}
+
+.wrapper-70 {
+    width: 70%;
+    margin: auto;
 }
 
 .wrapper-60 {
@@ -130,9 +135,10 @@ section {
 }
 
 .fac-name {
-    position: fixed;
+    position: absolute;
     bottom: 25px;
     left: 25px;
+    z-index: 9999999;
     transition: all 0.5s ease-in-out;
 }
 
@@ -184,7 +190,7 @@ section {
 }
 #navbar ul li a{
     transition: all .2s ease;
-    
+
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 30px;
@@ -628,7 +634,7 @@ section {
     height: auto;
     top: 0px;
     transition: all 0.2s ease;
-    
+
 }
 
 .workshop-card:hover{
@@ -787,6 +793,53 @@ img.itforge {
 }
 
 
+/*Section9*/
+#section9{
+
+    background-color: #fff;
+}
+.game-talk{
+    padding: 55px 0px 55px 0px;
+    background-image: url(../images/game-talk-bg.png);
+}
+.text-talk{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color:rgba(0, 0, 0, 0.8);
+    text-align: center;
+    border-radius: 10px;
+}
+.text-talk h2{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #fdc82c;
+}
+
+.text-talk h1{
+    color: #fff;
+}
+
+.text-talk h2{
+    color: #fdc82c;
+}
+
+.game-btn{
+    border: none;
+    margin-top: 10px;
+    border-radius: 10000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    font-family: cloud-b;
+    font-size: 19pt;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-top: 30px;
+}
+
+
 /*Footer*/
 
 footer {
@@ -838,8 +891,8 @@ footer {
     -webkit-hyphens: auto;
     hyphens: auto;
     border-radius: 10px;
-            font-family: "cschat";
-        font-size: 18px;
+    font-family: "cschat";
+    font-size: 18px;
 }
 
 .register{
@@ -868,6 +921,11 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
+    .game-btn{
+        width: 90%;
+        border-radius: 0px;
+    }
+
     .card-battle-item {
         width: 100%;
         float: left;
@@ -892,13 +950,13 @@ footer {
         margin-top: 10px;
     }
 
-        .fac-name{
+    .fac-name{
         display: none;
     }
 }
 
 @media screen and (max-width: 800px) {
-    
+
     .navbar-brand{
         display: none;
     }
@@ -938,10 +996,10 @@ footer {
     }
 
     #navbar {
-    margin-top: 0px;
-    margin-right: 0px;
-}
-    
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+
     .navbar-default .navbar-collapse,
     .navbar-default .navbar-form {
         border: none;
@@ -969,10 +1027,9 @@ footer {
         float: none;
         margin-bottom: 20px;
     }
-    
+
     .intro-word p{
         width: 100%;
     }
-    
-}
 
+}

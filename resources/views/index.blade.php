@@ -62,14 +62,13 @@
             <div class="intro">
                 <div class="intro-word animated">
                     <div class="title">
-                        <h1>เลือกเรียน เปลี่ยนชีวิต
+                        <h1>เลือกในสิ่งที่ใช่ เรียนในสิ่งที่ชอบ
                             <div class="under-line blue-bg-color">
                             </div>
                         </h1>
                     </div>
-                    <p> สัมผัสเส้นทางการศึกษาทางด้านไอทีในทุกแง่มุม เปิดตัวหลักสูตรใหม่ ป.ตรี บรรยายพิเศษจากเน็ตไอดอลและกูรูไอทีจากเว็บไซต์เด็กดี
-                        ร่วมสนุกและลุ้นไปกับเกมการแข่งขันมากมาย สร้างแรงบันดาลใจไปกับนิทรรศการผลงานสุดเจ๋งของนักศึกษา ทดลองเรียนจริง
-                        และอีกมากมาย
+                    <p> กลับมาอีกครั้งกับงานเปิดบ้านไอทีลาดกระบัง “IT LADKRABANG OPEN HOUSE 2017” ที่จัดขึ้นอย่างต่อเนื่องกว่า
+                        10 ปี โดยคณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง สำหรับปีนี้จะได้พบกับกิจกรรมมากมายที่จะทำให้รู้จักกับการเรียนไอทีแบบถึงแก่น
                     </p>
 
                     <a class="btn btn-org btn-jumbo" href="{{URL('/schedule')}}" style="margin-top: 30px;">กำหนดการ</a>
@@ -787,6 +786,7 @@
 
                 </div>
             </div>
+
             <!-- Modal 5 -->
             <div id="clubfive" class="modal fade" role="dialog">
                 <div class="modal-dialog">
@@ -854,6 +854,60 @@
         </div>
     </section>
 
+    <!--Section 9-->
+    <section id="section9">
+        <div class="game-talk">
+            <div class="title">
+                <h1>เสวนา
+                    <div class="under-line org-bg-color">
+                    </div>
+                </h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="text-talk">
+                        <h2 class="text-center">Behide The Sceen</h2>
+                        <h1 class="text-center">REAL-LIFE GAME DEVELOPERS</h1>
+
+                        <button class="btn-org game-btn " data-toggle="modal" data-target="#gametalk">ดูเพิ่มเติม</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modal 5 -->
+    <div id="gametalk" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h1 class="modal-title light text-center">การเสวนาเรื่อง “ชีวิตจริง Game Developer”</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="imggroup">
+                            <div class="row rownominus">
+                                <div class="col-xs-12 col-md-12">
+                                    <img src="{{('/assets/images/game-poster.jpg')}}" class="club img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-xs-12">
+                            <p>Game Developer”	การเสวนาเรื่อง “ชีวิตจริง Game Developer”  เป็นการเสวนาถึงชีวิตจริงของ Game Developers ว่าเป็นอย่างไร โดยผู้มีประสบการณ์ทางด้านการพัฒนาเกมส์ </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">ปิดหน้าต่าง</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <!--Section 7-->
     <section id="section7">
@@ -862,7 +916,7 @@
             </div>
 
             <div class="title white-color">
-                <h1>ภาพบบรรยากาศภายในงาน
+                <h1>ภาพบรรยากาศภายในงาน
                     <div class="under-line white-bg-color">
                     </div>
                 </h1>
