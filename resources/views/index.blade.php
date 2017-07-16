@@ -891,7 +891,7 @@
                         <div class="imggroup">
                             <div class="row rownominus">
                                 <div class="col-xs-12 col-md-12">
-                                    <img src="{{('/assets/images/game-poster.jpg')}}" class="club img-responsive">
+                                    <img src="{{URL('/assets/images/game-poster.jpg')}}" class="club img-responsive">
                                 </div>
                             </div>
                         </div>
