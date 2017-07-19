@@ -839,6 +839,10 @@ img.itforge {
     margin-top: 30px;
 }
 
+.game-talk > .row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
 
 /*Footer*/
 

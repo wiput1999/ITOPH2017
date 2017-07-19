@@ -1,6 +1,6 @@
 <footer>
     <div class="wrapper">
-        <div class="footer-left">©2016 Faculty of Information Technology, KMITL</div>
+        <div class="footer-left">©2017 Faculty of Information Technology, KMITL</div>
         <div class="footer-right">
 
             <p><a href="">2012</a> |

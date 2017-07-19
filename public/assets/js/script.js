@@ -65,7 +65,6 @@ $(document).ready(function () {
     var hilight_img = $(".hilight-img");
     $(window).scroll(function () {
         var ScrollTop = parseInt($(window).scrollTop());
-        console.log(ScrollTop);
 
         var sec2 = $("#section2").offset().top;
         var sec3 = $("#section3").offset().top;
