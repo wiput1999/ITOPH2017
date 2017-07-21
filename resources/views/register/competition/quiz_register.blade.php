@@ -3,7 +3,7 @@
     <div class="paper">
         <div class="container">
             <section class="regis-header">
-                <h1 class="text-center">ลงทะเบียนการแข่งขันตอบคำถามด้านเทคโนโลยีสารสนเทศ</h1>
+                <h1 class="text-center">ลงทะเบียนการแข่งขันแก้ปัญหาเชิงวิเคราะห์</h1>
                 <h2 class="text-center"><small>วันที่ 1 กันยายน 2560</small></h2>
             </section>
             <section class="regis-error">
