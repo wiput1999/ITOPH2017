@@ -866,7 +866,7 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <div class="text-talk">
-                        <h2 class="text-center">Behide The Sceen</h2>
+                        <h2 class="text-center">Behide The Scenes</h2>
                         <h1 class="text-center">REAL-LIFE GAME DEVELOPERS</h1>
 
                         <button class="btn-org game-btn " data-toggle="modal" data-target="#gametalk">ดูเพิ่มเติม</button>
