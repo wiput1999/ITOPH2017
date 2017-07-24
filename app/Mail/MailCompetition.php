@@ -44,13 +44,13 @@ class MailCompetition extends Mailable implements ShouldQueue
         else if ($this->competition == "network") {
             return $this->markdown('emails.network')
                 ->from("openhouse@it.kmitl.ac.th", "IT Ladkrabang Openhouse")
-                ->subject("ความปลอดภัยของระบบคอมพิวเตอร์ | IT Ladkrabang Openhouse 2017");
+                ->subject("การแข่งขันความปลอดภัยของระบบคอมพิวเตอร์ | IT Ladkrabang Openhouse 2017");
         }
 //        Project IT
         else if ($this->competition == "projectit") {
             return $this->markdown('emails.projectit')
                 ->from("openhouse@it.kmitl.ac.th", "IT Ladkrabang Openhouse")
-                ->subject("การแข่งขันความปลอดภัยของระบบคอมพิวเตอร์ | IT Ladkrabang Openhouse 2017");
+                ->subject("การประกวดโครงงานเทคโนโลยีสารสนเทศระดับมัธยมศึกษาตอนปลาย | IT Ladkrabang Openhouse 2017");
         }
 //        PHP
         else if ($this->competition == "php") {
@@ -62,7 +62,7 @@ class MailCompetition extends Mailable implements ShouldQueue
         else if ($this->competition == "quiz") {
             return $this->markdown('emails.quiz')
                 ->from("openhouse@it.kmitl.ac.th", "IT Ladkrabang Openhouse")
-                ->subject("การแข่งขันความปลอดภัยของระบบคอมพิวเตอร์ | IT Ladkrabang Openhouse 2017");
+                ->subject("การแข่งขันตอบคำถามด้านเทคโนโลยีสารสนเทศ | IT Ladkrabang Openhouse 2017");
         }
 
     }
