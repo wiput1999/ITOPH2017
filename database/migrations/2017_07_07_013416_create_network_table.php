@@ -16,7 +16,7 @@ class CreateNetworkTable extends Migration
         Schema::create('network', function (Blueprint $table) {
             $table->increments('id');
             $table->text('team_name');
-            $table->integer('rank');
+            $table->integer('rank')->nullable();
             $table->text('member'); // Collect in JSON
             $table->text('school');
             $table->text('school_addr');

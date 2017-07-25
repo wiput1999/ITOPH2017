@@ -28,13 +28,9 @@
                     {{--ทีม--}}
                     <h3>ชื่อทีม</h3>
                     <div class="row">
-                        <div class="col-md-6 col-xs-12">
+                        <div class="col-md-12 col-xs-12">
                             <label for="teamName">ชื่อทีม</label>
                             <input type="text" class="form-control" placeholder="ITKMITL" name="team_name" value="{{ old('team_name') }}" required>
-                        </div>
-                        <div class="col-md-6 col-xs-12">
-                            <label for="rank">อันดับทีม</label>
-                            <input type="number" min="1" max="100" class="form-control" placeholder="1" name="rank" value="{{ old('rank') }}" required>
                         </div>
                     </div>
                     {{--สมาชิก--}}

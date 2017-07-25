@@ -24,7 +24,6 @@ class NetworkController extends Controller
 
         $rules = [
             'team_name'             => 'required',
-            'rank'             => 'required|integer|between:1,100',
             'name.*'				=> 'required',
             'surname.*'             => 'required',
             'email.*'               => 'required|email',
@@ -41,7 +40,6 @@ class NetworkController extends Controller
 
         $messages = [
             'team_name.required'             =>  'กรุณากรอก  ชื่อทีม',
-            'rank.required'                  =>  'กรุณากรอก  อันดับของทีม',
             'name.*.required'                =>  'กรุณากรอก  ชื่อสมาชิก',
             'surname.*.required'             =>  'กรุณากรอก  นามสกุลของสมาชิก',
             'email.*.required'               =>  'กรุณากรอก  อีเมลของสมาชิก',
