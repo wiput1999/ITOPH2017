@@ -62,7 +62,7 @@ class MailCompetition extends Mailable implements ShouldQueue
         else if ($this->competition == "quiz") {
             return $this->markdown('emails.quiz')
                 ->from("openhouse@it.kmitl.ac.th", "IT Ladkrabang Openhouse")
-                ->subject("การแข่งขันตอบคำถามด้านเทคโนโลยีสารสนเทศ | IT Ladkrabang Openhouse 2017");
+                ->subject("การแข่งขันแก้ปัญหาเชิงวิเคราะห์ | IT Ladkrabang Openhouse 2017");
         }
 
     }
