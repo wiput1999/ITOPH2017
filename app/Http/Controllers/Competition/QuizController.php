@@ -64,7 +64,7 @@ class QuizController extends Controller
         $quiz->fill($request->all());
 
         $members = [];
-        for ($i = 0; $i < 2; $i++){
+        for ($i = 0; $i < 3; $i++){
             $member['prefix'] = $inputs['prefix'][$i];
             $member['name'] = $inputs['name'][$i];
             $member['surname'] = $inputs['surname'][$i];
@@ -88,7 +88,7 @@ class QuizController extends Controller
 
         \Mail::to($account['email'])->send(new MailCompetition($inputs["teacher_name"], $quiz, $competition));
 
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 3; $i++) {
             \Mail::to($inputs['email'][$i])->send(new MailCompetition($inputs['name'][$i], $quiz, $competition));
         }
 
