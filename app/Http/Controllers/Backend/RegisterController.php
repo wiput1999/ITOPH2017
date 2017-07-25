@@ -26,13 +26,13 @@ class RegisterController extends Controller
 
         switch ($type) {
             case 1:
-                $guest = DB::table('guest')->where('id', $id)->first();
+                $guest = Guest::where('id', $id)->first();
                 break;
             case 2:
-                $guest = DB::table('guest_student')->where('id', $id)->first();
+                $guest = GuestStudent::where('id', $id)->first();
                 break;
             case 3:
-                $guest = DB::table('guest_school')->where('id', $id)->first();
+                $guest = GuestSchool::where('id', $id)->first();
                 break;
             default:
                 dd("fuck you");

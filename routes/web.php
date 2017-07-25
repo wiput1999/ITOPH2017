@@ -73,10 +73,68 @@ Route::get('/backend/login', 'Auth\LoginController@showLoginForm')->name('login'
 Route::post('/backend/login', 'Auth\LoginController@login');
 
 Route::post('/backend/logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('/backend/logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('/backend/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::post('/backend/register', 'Auth\RegisterController@register');
+//Route::get('/backend/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+//Route::post('/backend/register', 'Auth\RegisterController@register');
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/backend/dashboard', function() {
+        return view('backend.main');
+    })->name('home');
+
+    Route::get('/backend/register/common/excel', [
+        'as' => 'commonExcel',
+        'uses' => 'Backend\RegisterCommonController@excel'
+    ]);
+    Route::get('/backend/register/school/excel', [
+        'as' => 'schoolExcel',
+        'uses' => 'Backend\RegisterSchoolController@excel'
+    ]);
+    Route::get('/backend/register/student/excel', [
+        'as' => 'studentExcel',
+        'uses' => 'Backend\RegisterStudentController@excel'
+    ]);
+    Route::resource('/backend/register/common', 'Backend\RegisterCommonController');
+    Route::resource('/backend/register/school', 'Backend\RegisterSchoolController');
+    Route::resource('/backend/register/student', 'Backend\RegisterStudentController');
+    Route::resource('/backend/register', 'Backend\RegisterController');
+    Route::post('/backend/register/checkin/{id}', 'Backend\RegisterController@postCheckin');
+    Route::resource('/backend/user', 'Backend\UserController');
+    Route::get('/backend/competition/esport/excel', [
+        'as' => 'esportExcel',
+        'uses' => 'Backend\EsportController@excel'
+    ]);
+    Route::get('/backend/competition/php/excel', [
+        'as' => 'phpExcel',
+        'uses' => 'Backend\PhpController@excel'
+    ]);
+    Route::get('/backend/competition/quiz/excel', [
+        'as' => 'quizExcel',
+        'uses' => 'Backend\ITQuizController@excel'
+    ]);
+    Route::get('/backend/competition/network/excel', [
+        'as' => 'networkExcel',
+        'uses' => 'Backend\NetworkController@excel'
+    ]);
+    Route::get('/backend/competition/pitching/excel', [
+        'as' => 'pitchingExcel',
+        'uses' => 'Backend\ITPitchingController@excel'
+    ]);
+    Route::resource('/backend/competition/esport', 'Backend\EsportController');
+    Route::resource('/backend/competition/pitching', 'Backend\ITPitchingController');
+    Route::resource('/backend/competition/network', 'Backend\NetworkController');
+    Route::resource('/backend/competition/php', 'Backend\PhpController');
+    Route::resource('/backend/competition/quiz', 'Backend\ITQuizController');
+    Route::post('/backend/competition/{type}/{id}/change', [
+        'as' => 'competitionConfirmChange',
+        'uses' => 'Competition\CheckController@change']);
+    Route::get('/backend/competition/pitching/{id}/bizcanvas', [
+        'as' => 'getBizcanvas',
+        'uses' => 'Competition\ITPitchingController@getBizcanvas'
+    ]);
+    Route::get('/backend/competition/pitching/{id}/storyboard', [
+        'as' => 'getStoryboard',
+        'uses' => 'Competition\ITPitchingController@getStoryboard'
+    ]);
 });
