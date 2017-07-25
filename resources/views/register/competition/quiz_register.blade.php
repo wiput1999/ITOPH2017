@@ -139,16 +139,16 @@
                                     <div class="form-group">
                                         <label>คำนำหน้าชื่อ</label>
                                         <select class="form-control" name="prefix[]" required>
-                                            <option value="นาย" {{  (old('prefix')[1] == "นาย" ? "selected":"") }}>นาย</option>
-                                            <option value="นาง" {{ (old('prefix')[1] == "นาง" ? "selected":"") }}>นาง</option>
-                                            <option value="นางสาว" {{ (old('prefix')[1] == "นางสาว" ? "selected":"") }}>นางสาว</option>
+                                            <option value="นาย" {{  (old('prefix')[2] == "นาย" ? "selected":"") }}>นาย</option>
+                                            <option value="นาง" {{ (old('prefix')[2] == "นาง" ? "selected":"") }}>นาง</option>
+                                            <option value="นางสาว" {{ (old('prefix')[2] == "นางสาว" ? "selected":"") }}>นางสาว</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-xs-7">
                                     <div class="form-group">
                                         <label>ชื่อ</label>
-                                        <input type="text" class="form-control" placeholder="ไอที" name="name[]" required value="{{ old('name')[1] }}">
+                                        <input type="text" class="form-control" placeholder="ไอที" name="name[]" required value="{{ old('name')[2] }}">
                                     </div>
                                 </div>
                             </div>
@@ -156,7 +156,7 @@
                         <div class="col-md-6 col-xs-12">
                             <div class="form-group">
                                 <label>นามสกุล</label>
-                                <input type="text" class="form-control" placeholder="ลาดกระบัง" name="surname[]" required value="{{ old('surname')[1] }}">
+                                <input type="text" class="form-control" placeholder="ลาดกระบัง" name="surname[]" required value="{{ old('surname')[2] }}">
                             </div>
                         </div>
                     </div>
@@ -165,17 +165,17 @@
                             <div class="form-group">
                                 <label>ระดับการศึกษา</label>
                                 <select class="form-control" name="class[]" required>
-                                    <option value="4" {{ old('class')[1] ==  "4" ? "selected":"" }}>ม. 4</option>
-                                    <option value="5" {{ old('class')[1] ==  "5" ? "selected":"" }}>ม. 5</option>
+                                    <option value="4" {{ old('class')[2] ==  "4" ? "selected":"" }}>ม. 4</option>
+                                    <option value="5" {{ old('class')[2] ==  "5" ? "selected":"" }}>ม. 5</option>
                                     <option value="6" selected="selected" {{ old('class')[1] ==  "6" ? "selected":"" }}>ม. 6</option>
-                                    <option value="0" {{ old('class')[1] ==  "0" ? "selected":"" }}>ปวช.</option>
+                                    <option value="0" {{ old('class')[2] ==  "0" ? "selected":"" }}>ปวช.</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-8 col-xs-6">
                             <div class="form-group">
                                 <label>อีเมล</label>
-                                <input type="email" class="form-control" placeholder="e.g. openhouse@it.kmitl.ac.th" name="email[]" required value="{{ old('email')[1] }}">
+                                <input type="email" class="form-control" placeholder="e.g. openhouse@it.kmitl.ac.th" name="email[]" required value="{{ old('email')[2] }}">
                             </div>
                         </div>
                     </div>
