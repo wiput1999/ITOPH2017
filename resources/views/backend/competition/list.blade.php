@@ -56,7 +56,7 @@
                                         </div>
                                     @endif
                                     <select name="confirm" class="confirmOption form-control">
-                                        <option value="0" {{$data->confirm == 0 ? "selected":""}}>ยังไม่ได้ส่ง</option>
+                                        <option value="0" {{$data->confirm == 0 ? "selected":""}}>ยังไม่ตรวจสอบ</option>
                                         <option value="1" {{$data->confirm == 1 ? "selected":""}}>เรียบร้อย</option>
                                         <option value="-1" {{$data->confirm == -1 ? "selected":""}}>ลงทะเบียนซ้ำ</option>
                                     </select>
@@ -69,13 +69,10 @@
                         <form action="{{URL::route('backend.competition.'.$typeText.'.destroy', $data->id)}}" method="post">
                             {!! csrf_field() !!}
                             {!! method_field('DELETE') !!}
-                            <a href="{{URL::route('registerCheck', [$type, $data->remember])}}" class="btn btn-default btn-xs" data-toggle="tooltip"  title="Status"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-                            <a href="{{ URL::asset("pdf/" . $data->remember.".pdf") }}" class="btn btn-default btn-xs" data-toggle="tooltip"  title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
                             <a href="{{URL::route('backend.competition.'.$typeText.'.show', $data->id)}}" class="btn btn-default btn-xs" data-toggle="tooltip"  title="View"><i class="fa fa-eye" aria-hidden="true"></i></a>
                             <a href="{{URL::route('backend.competition.'.$typeText.'.edit', $data->id)}}" class="btn btn-default btn-xs" data-toggle="tooltip"  title="Edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                             <button type="submit" class="btn btn-danger btn-xs" data-toggle="tooltip" title="Delete"><i class="fa fa-times"></i></button>
                         </form>
-
                     </td>
                 </tr>
             @endforeach

@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use App\Models\ESport;
 use Illuminate\Support\Facades\Validator;
 use Maatwebsite\Excel\Facades\Excel;
-use Illuminate\Support\Facades\DB;
 
 class EsportController extends Controller
 {
@@ -120,7 +119,7 @@ class EsportController extends Controller
 
         $validator = Validator::make($inputs, $rules, $messages);
         if($validator->fails()){
-            return redirect('/backend/competition/esport/'.$id.'/edit')->with(['data' => $inputs])->withErrors($validator);
+            return redirect('/backend/competition/esport/edit/'.$id)->with(['data' => $inputs])->withErrors($validator);
         }
 
         $esport->fill($request->all());
@@ -152,7 +151,7 @@ class EsportController extends Controller
         $esport->member = json_encode($members, JSON_UNESCAPED_UNICODE);
         $esport->save();
 
-        return redirect('/backend/competition/esport/'.$id);
+        return redirect('/backend/competition/esport/view/'.$id);
     }
 
     /**
@@ -173,7 +172,7 @@ class EsportController extends Controller
             $excel->sheet('Sheet', function($sheet)
             {
                 $datas = ESport::all();
-                $sheet->loadView('register.competition.esport.excel', ['datas' => $datas]);
+                $sheet->loadView('backend.competition.excel.esport', ['datas' => $datas]);
             });
         })->download('xls');
     }

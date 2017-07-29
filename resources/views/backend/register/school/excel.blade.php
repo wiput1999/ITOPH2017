@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>prefix</th>
+        <th>name</th>
+        <th>surname</th>
+        <th>gender</th>
+        <th>age</th>
+        <th>school</th>
+        <th>follower</th>
+        <th>province</th>
+        <th>workshop</th>
+        <th>phone</th>
+        <th>email</th>
+        <th>facebook</th>
+        <th>twitter</th>
+        <th>news</th>
+        <th>confirm</th>
+        <th>created_at</th>
+        <th>updated_at</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach($datas as $data)
+        <tr>
+            <td>{{$data->id}}</td>
+            <td>{{$data->prefix}}</td>
+            <td>{{$data->name}}</td>
+            <td>{{$data->surname}}</td>
+            <td>{{$data->gender}}</td>
+            <td>{{$data->age}}</td>
+            <td>{{$data->school}}</td>
+            <td>{{$data->follower}}</td>
+            <td>{{$data->province}}</td>
+            <td>{{$data->workshop}}</td>
+            <td>{{$data->phone}}</td>
+            <td>{{$data->email}}</td>
+            <td>{{$data->facebook}}</td>
+            <td>{{$data->twitter}}</td>
+            <td>{{$data->news}}</td>
+            <td>{{$data->confirm}}</td>
+            <td>{{$data->created_at}}</td>
+            <td>{{$data->updated_at}}</td>
+        </tr>
+    @endforeach
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="3"><strong>Total:</strong> {{$datas->count()}}</td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>

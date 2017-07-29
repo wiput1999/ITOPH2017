@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Backend | IT Ladkrabang Open House 2016</title>
+    <title>Backend | IT Ladkrabang Open House 2017</title>
     <!--Bootstrap-->
     <link href="{{URL::asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/backend.css') }}">
@@ -49,10 +49,7 @@
                 </ul>
             </li>
             <li>
-                <a href="{{URL('/backend/form')}}">Form</a>
-            </li>
-            <li>
-                <a href="{{URL('/backend/user')}}">Users</a>
+                <a href="{{URL('/backend/logout')}}">Logout</a>
             </li>
         </ul>
     </div>

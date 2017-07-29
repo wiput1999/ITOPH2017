@@ -58,7 +58,6 @@
         </table>
         <ul class="pagination"></ul>
         <p class="total"><strong>Total:</strong> {{sizeof($datas)}}</p>
-        <a href="{{URL::route('commonExcel')}}" class="btn btn-primary" disabled>Export</a>
     </div>
 @endsection
 @section('script')
