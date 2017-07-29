@@ -41,7 +41,10 @@ Route::get('/register/guest_student', 'RegisterController@createGuestStudentRegi
 
 Route::post('/register/guest_student', 'RegisterController@storeGuestStudentRegister');
 
-// Register MailESport
+Route::get('/competition/approved/{type}', [
+    'as' => 'approvedTeam',
+    'uses' => 'Competition\CheckController@approved'
+]);
 
 // PHP
 Route::get('/competition/php', 'Competition\PhpController@showRule');

@@ -13,54 +13,27 @@ use App\Models\Project;
 
 class CheckController extends Controller
 {
-    public function getCheck($type=null, $remember=null) {
-        if (is_null($remember) || is_null($type)) {
-            return redirect('/');
-        }
-        $team = null;
-        switch ($type) {
-            case 1:
-                $team = ESport::where('remember', $remember)->first();
-                break;
-            case 2:
-                $team = Quiz::where('remember', $remember)->first();
-                break;
-            case 3:
-                $team = Network::where('remember', $remember)->first();
-                break;
-            case 4:
-                $team = Php::where('remember', $remember)->first();
-                break;
-            case 5:
-                $team = Project::where('remember', $remember)->first();
-                break;
-            default:
-                return redirect('/');
-        }
-        return view('register.competition.check', ["title" => "สถานะลงทะเบียนการแข่งขัน | ","team" => $team]);
-    }
-
     public function approved(Request $request, $type) {
         switch ($type) {
             case 'esport':
                 $team = ESport::where('confirm', 1)->get();
-                $typeName = "การแข่งกีฬาอิเล็กทรอนิกส์";
+                $typeName = "การแข่งขันกีฬาอิเล็กทรอนิกส์ (E-Sports)";
                 break;
-            case 'pitching':
+            case 'project':
                 $team = Project::where('confirm', 1)->get();
-                $typeName = "การแข่งขันการนำเสนอแนวคิดโครงงานไอที";
+                $typeName = "การประกวดโครงงานเทคโนโลยีสารสนเทศระดับมัธยมศึกษาตอนปลาย (High School IT Student Project Contest)";
                 break;
             case 'network':
                 $team = Network::where('confirm', 1)->get();
-                $typeName = "การแข่งความปลอดภัยของระบบคอมพิวเตอร์";
+                $typeName = "การแข่งขันความปลอดภัยของระบบคอมพิวเตอร์ (Network Security)";
                 break;
             case 'php':
                 $team = Php::where('confirm', 1)->get();
-                $typeName = "การแข่งพัฒนาเว็บไซต์";
+                $typeName = "การแข่งขันพัฒนาเว็บไซต์ด้วย (PHP และ JavaScript)";
                 break;
             case 'quiz':
                 $team = Quiz::where('confirm', 1)->get();
-                $typeName = "การแข่งตอบปัญหา";
+                $typeName = "การแข่งขันแก้ปัญหาเชิงวิเคราะห์";
                 break;
             default:
                 dd("fuck you");
@@ -70,8 +43,8 @@ class CheckController extends Controller
             dd("fuck");
         }
 
-        return view('new.approved', ['title' => 'ประกาศรายชื่อผู้มีสิทธิ์เข้าร่วมการแข่งขันทางวิชาการ
-', 'datas' => $team, 'type' => $typeName]);
+        return view('register.approved', ['title' => 'ประกาศรายชื่อผู้มีสิทธิ์เข้าร่วมการแข่งขันทางวิชาการ | 
+', 'teams' => $team, 'type' => $typeName]);
     }
 
     public function change(Request $request, $type, $id) {
