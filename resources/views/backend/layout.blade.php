@@ -28,7 +28,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">Dashboard</a>
+                <a href="{{URL('/backend/dashboard')}}">Dashboard</a>
             </li>
             <li>
                 <a href="{{URL('/backend/register')}}">Register</a>
