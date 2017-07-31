@@ -23,6 +23,7 @@
 
 @include('layout.footer')
 
+@include('layout.analytics')
 </body>
 
 </html>
