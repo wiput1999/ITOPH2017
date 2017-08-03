@@ -78,8 +78,9 @@ Route::post('/backend/login', 'Auth\LoginController@login');
 Route::post('/backend/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/backend/logout', 'Auth\LoginController@logout')->name('logout');
 
-//Route::get('/backend/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-//Route::post('/backend/register', 'Auth\RegisterController@register');
+// Live check in section
+Route::get('/api/checkin', 'CheckinCountController@checkincount');
+Route::get('/checkin', 'CheckinCountController@showcount');
 
 Route::group(['middleware' => 'auth'], function() {
 //    Dashboard
@@ -100,6 +101,8 @@ Route::group(['middleware' => 'auth'], function() {
         'uses' => 'Backend\RegisterStudentController@excel'
     ]);
 //    School
+    Route::get('/backend/register/school/new', 'Backend\RegisterSchoolController@create')->name('backend.register.school.new');
+    Route::post('/backend/register/school/store', 'Backend\RegisterSchoolController@store')->name('backend.register.school.store');
     Route::resource('/backend/register/school', 'Backend\RegisterSchoolController');
     Route::delete('/backend/register/school/destroy/{id}', 'Backend\RegisterSchoolController@destroy')->name('backend.register.school.destroy');
     Route::get('/backend/register/school/view/{id}', 'Backend\RegisterSchoolController@show')->name('backend.register.school.show');

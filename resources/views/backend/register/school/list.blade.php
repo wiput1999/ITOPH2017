@@ -49,6 +49,7 @@
         </table>
         <p class="total"><strong>Total:</strong> {{$datas->count()}}</p>
         <a href="{{URL::route('schoolExcel')}}" class="btn btn-primary">Export</a>
+        <a href="{{URL::route('backend.register.school.new')}}" class="btn btn-success">New</a>
     </div>
 @endsection
 @section('script')

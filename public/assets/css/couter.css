@@ -1,0 +1,39 @@
+#couter-section{
+    width: 100%;
+        background-repeat: repeat;
+    background-image: url(images/section1.png);
+}
+
+.logo{
+    max-width: 75%;
+}
+
+
+.couter h2{
+    font-size: 9em;
+}
+
+.couter h1{
+    width:100%;
+    font-size: 12em;
+}
+
+.couter{
+    
+    word-wrap: break-word;
+    width: 100%;
+    height: auto;
+    margin:0 auto;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .couter h2{
+    font-size: 2em;
+}
+
+.couter h1{
+    font-size: 3em;
+}
+}
