@@ -82,7 +82,15 @@ Route::get('/backend/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/api/checkin', 'CheckinCountController@checkincount');
 Route::get('/checkin', 'CheckinCountController@showcount');
 
+// Backend shortcut
+Route::get('/backend', function() {
+    return redirect('/backend/dashboard');
+});
+
 Route::group(['middleware' => 'auth'], function() {
+    Route::get('/home', function() {
+        return redirect('/backend/dashboard');
+    });
 //    Dashboard
     Route::get('/backend/dashboard', function() {
         return view('backend.main');
