@@ -1,5 +1,6 @@
-#couter-section{
+#counter-section{
     width: 100%;
+    height: calc(100vh);
     background-repeat: repeat;
     background-image: url('../images/section1.png');
 }
@@ -9,17 +10,16 @@
 }
 
 
-.couter h2{
+.counter h2{
     font-size: 2em;
 }
 
-.couter h1{
+.counter h1{
     width:100%;
     font-size: 5em;
 }
 
-.couter{
-    
+.counter{
     word-wrap: break-word;
     width: 100%;
     height: auto;

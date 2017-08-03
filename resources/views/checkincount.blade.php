@@ -13,9 +13,9 @@
 </head>
 
 <body>
-    <section id="couter-section">
+    <section id="counter-section">
         <div class="container">
-            <div class="couter text-center">
+            <div class="counter text-center">
                 <div class="logo">
                     <img src="{{URL('/assets/images/logo.svg')}}" alt="">
                 </div>
