@@ -1,7 +1,7 @@
 #couter-section{
     width: 100%;
-        background-repeat: repeat;
-    background-image: url(images/section1.png);
+    background-repeat: repeat;
+    background-image: url('../images/section1.png');
 }
 
 .logo{
@@ -10,12 +10,12 @@
 
 
 .couter h2{
-    font-size: 9em;
+    font-size: 2em;
 }
 
 .couter h1{
     width:100%;
-    font-size: 12em;
+    font-size: 5em;
 }
 
 .couter{
@@ -31,9 +31,9 @@
 
     .couter h2{
     font-size: 2em;
-}
+    }
 
-.couter h1{
-    font-size: 3em;
-}
+    .couter h1{
+        font-size: 3em;
+    }
 }
