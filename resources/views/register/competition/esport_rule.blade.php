@@ -77,7 +77,7 @@
             <hr>
             <div class="text-center">
                 <a href="{{URL('/competition/esport/register')}}">
-                    <button type="submit" class="btn btn-primary btn-lg" disabled>ปิดรับสมัครแล้ว</button>
+                    <button type="submit" class="btn btn-primary btn-lg">ลงทะเบียน</button>
                 </a>
             </div>
         </div>
