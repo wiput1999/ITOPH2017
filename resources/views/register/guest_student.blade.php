@@ -153,9 +153,6 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-mid-10 col-xs-9">
-                        <strong>หมายเหตุ : ทางผู้จัดงานต้องได้รับเอกสารการสมัครภายในวันที่ 16 สิงหาคม 2560</strong>
-                    </div>
                 </div>
                 {{--end เวิร์กช้อป--}}
                 <div class="text-center">
