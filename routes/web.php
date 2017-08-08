@@ -58,8 +58,8 @@ Route::post('/competition/network/register', 'Competition\NetworkController@stor
 
 // E-Sport
 Route::get('/competition/esport', 'Competition\EsportController@showRule');
-Route::get('/competition/esport/register', 'Competition\EsportController@showRegister');
-Route::post('/competition/esport/register', 'Competition\EsportController@storeRegister');
+//Route::get('/competition/esport/register', 'Competition\EsportController@showRegister');
+//Route::post('/competition/esport/register', 'Competition\EsportController@storeRegister');
 
 // Quiz
 Route::get('/competition/quiz', 'Competition\QuizController@showRule');
