@@ -19,7 +19,7 @@
                 <div class="logo">
                     <img src="{{URL('/assets/images/logo.svg')}}" alt="">
                 </div>
-                <h2>จำนวนผู้เข้ารว่มงาน</h2>
+                <h2>จำนวนผู้เข้าร่วมงาน</h2>
                 <h1 id="total">Loading...</h1>
             </div>
         </div>

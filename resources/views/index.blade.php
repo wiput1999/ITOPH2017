@@ -8,7 +8,7 @@
             </div>
             <div class="time-date">
                 <h2 class="text-center">1 กันยายน 2560</h2>
-                <h2 class="text-center">เวลา 09.00 - 16.30 น.</h2>
+                <h2 class="text-center">เวลา 08.00 - 16.30 น.</h2>
             </div>
 
             <div class="jumbobuttons text-center">
@@ -438,6 +438,9 @@
                                 น้อง ๆ สามารถนำความรู้จากเวิร์คชอปนี้ ไปสร้างเกมที่เสมือนจริงได้ด้วยตนเอง
                             </div>
                         </div>
+                        <div class="alert-danger text-center">
+                                หากต้องการเข้าร่วม Workshop กรุณามาลงทะเบียนร่วมงานในเวลา 8.00 น. ในวันงาน
+                            </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">ปิดหน้าต่าง</button>
                         </div>
@@ -467,6 +470,9 @@
 
                             </p>
                         </div>
+                        <div class="alert-danger text-center">
+                                หากต้องการเข้าร่วม Workshop กรุณามาลงทะเบียนร่วมงานในเวลา 8.00 น. ในวันงาน
+                            </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">ปิดหน้าต่าง</button>
                         </div>
@@ -494,6 +500,9 @@
 
                             </p>
                         </div>
+                        <div class="alert-danger text-center">
+                                หากต้องการเข้าร่วม Workshop กรุณามาลงทะเบียนร่วมงานในเวลา 8.00 น. ในวันงาน
+                            </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">ปิดหน้าต่าง</button>
                         </div>
@@ -515,6 +524,9 @@
                                 เพื่อที่เราจะได้ไปดักจับมันที่ตำแหน่งที่ดีที่สุด ด้วยวิทยาการข้อมูล
                             </p>
                         </div>
+                        <div class="alert-danger text-center">
+                                หากต้องการเข้าร่วม Workshop กรุณามาลงทะเบียนร่วมงานในเวลา 8.00 น. ในวันงาน
+                            </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">ปิดหน้าต่าง</button>
                         </div>
