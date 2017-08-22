@@ -76,8 +76,8 @@
             <li>ทีมที่ได้รับรางวัลชนะเลิศและรองชนะเลิศจะต้องมีคะแนนถึงเกณฑ์ที่คณะกรรมการกำหนด</li>
             <hr>
             <div class="text-center">
-                <a href="{{URL('/competition/esport/register')}}">
-                    <button type="submit" class="btn btn-primary btn-lg" disabled>ปิดรับสมัครแล้ว</button>
+                <a href="{{URL('/competition/approved/esport/')}}">
+                    <button class="btn btn-primary btn-lg">รายชื่อผู้มีสิทธิ์แข่งขัน</button>
                 </a>
             </div>
         </div>
