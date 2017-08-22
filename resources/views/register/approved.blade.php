@@ -2,7 +2,7 @@
 @section('content')
     <div class="paper">
         <div class="wrapper-70">
-            <h1 class="h-light text-center">ประกาศรายชื่อผู้มีสิทธิ์เข้าร่วมการแข่งขันทางวิชาการ</h1>
+            <h1 class="h-light text-center">ประกาศรายชื่อผู้มีสิทธิ์เข้าร่วมการแข่งขัน</h1>
             <h2 class="h-light text-center">{{ $type }}</h2>
             <table class="table table-hover">
                 <thead>
