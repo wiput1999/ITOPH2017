@@ -5,6 +5,9 @@
         <div class="container">
             <h1 class="h-light text-center">ลงทะเบียนเข้าชมงานสำหรับโรงเรียน</h1>
             <hr>
+            <div class="alert-danger text-center">
+                หากต้องการเข้าร่วม Workshop กรุณามาลงทะเบียนร่วมงานในเวลา 8.00 - 9.00 น. ในวันงาน
+            </div>
             <form action="{{URL('/register/guest_school')}}" method="post">
                 {!! csrf_field() !!}
                 <h3>ข้อมูลส่วนตัว</h3>

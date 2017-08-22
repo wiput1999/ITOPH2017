@@ -55,7 +55,7 @@
                                 <li>Sublime Text</li>
                                 <li>Atom</li>
                                 <li>XAMPP 5.6.21 (Apache, MySQL, PHP, phpMyAdmin)</li>
-                                <li>Framework : jQuery 1.12.4, jQuery UI 1.11.4 (All Components), Bootstrap 3.3.7</li>
+                                <li>Framework : jQuery 3.2.1, jQuery UI 1.12.1 (All Components), Bootstrap 3.3.7</li>
                             </ul>
                         </li>
                     </ul>
@@ -106,8 +106,8 @@
 
             <hr>
             <div class="text-center">
-                <a href="{{URL('/competition/php/register')}}">
-                    <button type="submit" class="btn btn-primary btn-lg">ลงทะเบียน</button>
+                <a href="{{URL('/competition/approved/php')}}">
+                    <button class="btn btn-primary btn-lg">รายชื่อผู้มีสิทธิ์แข่งขัน</button>
                 </a>
             </div>
         </div>

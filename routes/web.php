@@ -48,28 +48,28 @@ Route::get('/competition/approved/{type}', [
 
 // PHP
 Route::get('/competition/php', 'Competition\PhpController@showRule');
-Route::get('/competition/php/register', 'Competition\PhpController@showRegister');
-Route::post('/competition/php/register', 'Competition\PhpController@storeRegister');
+// Route::get('/competition/php/register', 'Competition\PhpController@showRegister');
+// Route::post('/competition/php/register', 'Competition\PhpController@storeRegister');
 
 // Network
 Route::get('/competition/network', 'Competition\NetworkController@showRule');
-Route::get('/competition/network/register', 'Competition\NetworkController@showRegister');
-Route::post('/competition/network/register', 'Competition\NetworkController@storeRegister');
+// Route::get('/competition/network/register', 'Competition\NetworkController@showRegister');
+// Route::post('/competition/network/register', 'Competition\NetworkController@storeRegister');
 
 // E-Sport
 Route::get('/competition/esport', 'Competition\EsportController@showRule');
-//Route::get('/competition/esport/register', 'Competition\EsportController@showRegister');
-//Route::post('/competition/esport/register', 'Competition\EsportController@storeRegister');
+// Route::get('/competition/esport/register', 'Competition\EsportController@showRegister');
+// Route::post('/competition/esport/register', 'Competition\EsportController@storeRegister');
 
 // Quiz
 Route::get('/competition/quiz', 'Competition\QuizController@showRule');
-Route::get('/competition/quiz/register', 'Competition\QuizController@showRegister');
-Route::post('/competition/quiz/register', 'Competition\QuizController@storeRegister');
+// Route::get('/competition/quiz/register', 'Competition\QuizController@showRegister');
+// Route::post('/competition/quiz/register', 'Competition\QuizController@storeRegister');
 
 // Project IT
 Route::get('/competition/project', 'Competition\ProjectITController@showRule');
-Route::get('/competition/project/register', 'Competition\ProjectITController@showRegister');
-Route::post('/competition/project/register', 'Competition\ProjectITController@storeRegister');
+// Route::get('/competition/project/register', 'Competition\ProjectITController@showRegister');
+// Route::post('/competition/project/register', 'Competition\ProjectITController@storeRegister');
 
 // Backend
 Route::get('/backend/login', 'Auth\LoginController@showLoginForm')->name('login');
