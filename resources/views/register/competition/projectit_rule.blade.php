@@ -96,8 +96,8 @@
 
             <hr>
             <div class="text-center">
-                <a href="{{URL('/competition/project/register')}}">
-                    <button type="submit" class="btn btn-primary btn-lg" disabled>ปิดรับสมัคร 🙈</button>
+                <a href="{{URL('/competition/approved/project')}}">
+                    <button class="btn btn-primary btn-lg">รายชื่อผู้มีสิทธิ์แข่งขัน</button>
                 </a>
             </div>
         </div>
