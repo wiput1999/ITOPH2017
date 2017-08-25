@@ -9,8 +9,14 @@ class CheckinCountController extends Controller
 {
     public function checkincount() {
         $guest = Guest::where('confirm', '<>', '')->count();
-        $school = GuestSchool::where('confirm', '<>', '')->count();
+        $schools = GuestSchool::where('confirm', '<>', '')->get();
         $student = GuestStudent::where('confirm', '<>', '')->count();
+
+        $school = 0;
+
+        foreach ($schools as $s) {
+            $school += $s['follower'];
+        }
 
         $total = $guest + $school + $student;
 
