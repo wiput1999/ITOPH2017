@@ -71,9 +71,9 @@ class RegisterController extends Controller
             if ($guest->gift == null) {
                 $guest->gift = Carbon\Carbon::now();
                 $guest->save();
-            } else {
-                dd("fuck");
+                return redirect('/backend/register');
             }
+            dd("fuck");
         }
         return redirect('/backend/register');
     }
