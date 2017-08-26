@@ -41,10 +41,10 @@ class RegisterController extends Controller
             if ($guest->confirm == null) {
                 $guest->confirm = Carbon\Carbon::now();
                 $guest->save();
-            } else {
-                $guest->confirm = null;
-                $guest->save();
+                return redirect('/backend/register');
             }
+            $guest->confirm = null;
+            $guest->save();
         }
         return redirect('/backend/register');
 
