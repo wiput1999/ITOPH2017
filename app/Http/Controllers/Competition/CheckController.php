@@ -13,7 +13,7 @@ use App\Models\Project;
 
 class CheckController extends Controller
 {
-    public function approved(Request $request, $type) {
+    public function approved($type) {
         switch ($type) {
             case 'esport':
                 $team = ESport::where('confirm', 1)->get();

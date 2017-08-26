@@ -79,7 +79,6 @@ class PhpController extends Controller
         $php->remember = $remember;
         $php->save();
 
-        $accounts = $members;
         //add teacher to accounts for send mail
         $account['email'] = $request->input('teacher_email');
 

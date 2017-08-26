@@ -20,7 +20,7 @@ class RegisterController extends Controller
         return view('backend.register.index', ['datas' => $datas]);
     }
 
-    public function postCheckin(Request $request, $code) {
+    public function postCheckin($code) {
         $type = substr($code, 0, 1);
         $id = (int) substr($code, 1);
 
@@ -50,7 +50,7 @@ class RegisterController extends Controller
 
     }
 
-    public function postGift(Request $request, $code) {
+    public function postGift($code) {
         $type = substr($code, 0, 1);
         $id = (int) substr($code);
 

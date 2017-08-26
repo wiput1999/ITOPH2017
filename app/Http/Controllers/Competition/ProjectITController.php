@@ -96,7 +96,6 @@ class ProjectITController extends Controller
         $competition = 'projectit';
 
         $account['email'] = $request->input('teacher_email');
-        $accounts[] = $account;
 
         \Mail::to($account['email'])->send(new MailCompetition($inputs["teacher_name"], $project, $competition));
 
